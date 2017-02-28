@@ -7,12 +7,12 @@
         <servlet-name>XXX</servlet-name>
         <servlet-class>org.jason.web.servlet.FirstServlet</servlet-class>
         <init-param>
-            <param-name>p1</param-name>
-            <param-value>v1</param-value>
+            <param-name>@Author</param-name>
+            <param-value>Jason</param-value>
         </init-param>
         <init-param>
-            <param-name>p2</param-name>
-            <param-value>v2</param-value>
+            <param-name>@Email</param-name>
+            <param-value>jie-trancender.org</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

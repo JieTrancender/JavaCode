@@ -12,15 +12,6 @@ import java.util.Enumeration;
 public class FirstServlet implements Servlet {
     /**
      * 生命周期方法
-     * 在Servlet被销毁之前调用，并只会被调用一次
-     */
-    @Override
-    public void destroy() {
-        System.out.println("destory...");
-    }
-
-    /**
-     * 生命周期方法
      * 在Servlet对象创建之后立马执行，并只执行一次
      */
     @Override
@@ -30,17 +21,28 @@ public class FirstServlet implements Servlet {
         /**
          *获取初始化参数
          */
-        System.out.println(servletConfig.getInitParameter("p1"));
-        System.out.println(servletConfig.getInitParameter("p2"));
+//        System.out.println("@Author: " + servletConfig.getInitParameter("@Author"));
+//        System.out.println("@Email: " + servletConfig.getInitParameter("@Email"));
 
         /**
          * 获取所有初始化参数的名称
          */
         Enumeration e = servletConfig.getInitParameterNames();
         while (e.hasMoreElements()) {
-            System.out.println(e.nextElement());
+            String paramName = (String)e.nextElement();
+            System.out.println(paramName + ": " + servletConfig.getInitParameter(paramName));
         }
     }
+
+    /**
+     * 生命周期方法
+     * 在Servlet被销毁之前调用，并只会被调用一次
+     */
+    @Override
+    public void destroy() {
+        System.out.println("destory...");
+    }
+
 
     /**
      * 可以用来获取Servlet的配置信息
@@ -59,7 +61,7 @@ public class FirstServlet implements Servlet {
      */
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("destoservicery...");
+        System.out.println("service...");
     }
 
     /**
