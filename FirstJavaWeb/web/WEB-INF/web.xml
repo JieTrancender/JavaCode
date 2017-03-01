@@ -47,4 +47,40 @@
         <servlet-name>SecondServlet</servlet-name>
         <url-pattern>/SecondServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FirstHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.FirstHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstHttpServlet</servlet-name>
+        <url-pattern>/FirstHttpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SecondHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.SecondHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecondHttpServlet</servlet-name>
+        <url-pattern>/SecondHttpServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.forward.AHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AHttpServlet</servlet-name>
+        <url-pattern>/AHttpServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.forward.BHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BHttpServlet</servlet-name>
+        <url-pattern>/BHttpServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
