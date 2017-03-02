@@ -1,7 +1,10 @@
 package org.jason.commons;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Random;
 
 /**
@@ -77,5 +80,9 @@ public class VerifyCode {
 
     public String getText() {
         return text;
+    }
+
+    public void output(BufferedImage bufferedImage, String fomat, OutputStream outputStream) throws IOException {
+        ImageIO.write(bufferedImage, fomat, outputStream);
     }
 }

@@ -17,7 +17,7 @@
 <a href="/session/session.jsp;JSESSIONID=<%= session.getId() %>">点击这里</a>
 
 <%
-  //它会查看cooiek是否存在，如果不存在，在制定的rul后添加jsessioid
+  //它会查看cookie是否存在，如果不存在，在制定的rul后添加jsessioid
   out.println(response.encodeURL("/LoginHttpServlet"));
 %>
 </body>

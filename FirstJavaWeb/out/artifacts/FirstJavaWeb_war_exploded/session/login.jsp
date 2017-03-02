@@ -9,6 +9,16 @@
 <html>
 <head>
   <title>Title</title>
+  <script>
+    function _change() {
+        /**
+         * 1. 得到元素
+         * 2. 修改src为/VerifyHttpServlet
+         */
+        var imgEle = document.getElementById("verifyImage");
+        imgEle.src = "/VerifyHttpServlet?a=" + new Date().getTime();
+    }
+  </script>
 </head>
 <body>
   <%-- 本页面提供登录表单，并且要显示错误信息 --%>
@@ -43,6 +53,10 @@
   <form action="/LoginHttpServlet" method="post">
     用户名: <input type="text" name = "userName" value = "<%= userName %>"><br/>
     密码: <input type="password" name = "password"><br/>
+    验证码: <input type="text" name = "verifyCode" size = "3">
+    <img id = "verifyImage" src="/VerifyHttpServlet" alt="/VerifyHttpServlert">
+    <a href="javascript:_change();">换一张</a>
+    <br/>
     <input type="submit" value = "登录">
   </form>
 </body>

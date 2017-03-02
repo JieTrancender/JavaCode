@@ -13,6 +13,22 @@ import java.io.IOException;
 public class LoginHttpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /**
+         * 校验验证码
+         *   1. 从Session域中获取正确的验证码
+         *   2. 从表单中获取用户填写的验证码
+         *   3. 比较
+         *   4. 相同向下运行，否则保存错误信息到request域，转发到login.jsp
+         */
+        String sessionCode = (String) request.getSession().getAttribute("sessionVerifyCode");
+        String paramCode = request.getParameter("verifyCode");
+
+        if (!paramCode.equalsIgnoreCase(sessionCode)) {
+            request.setAttribute("msg", "验证码错误");
+            request.getRequestDispatcher("/session/login.jsp").forward(request, response);
+            return;
+        }
+
+        /**
          * 获取表单数据
          */
         //处理中文问题
@@ -53,7 +69,6 @@ public class LoginHttpServlet extends HttpServlet {
             RequestDispatcher qr = request.getRequestDispatcher("/session/login.jsp");
             qr.forward(request, response);  //转发
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -92,8 +92,30 @@
         <url-pattern>/LoginHttpServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>VerifyHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.forward.VerifyHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerifyHttpServlet</servlet-name>
+        <url-pattern>/VerifyHttpServlet</url-pattern>
+    </servlet-mapping>
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errors/userErrorPage.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>505</error-code>
+        <location>/errors/errorPage.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.RuntimeException</exception-type>
+        <location>/index.jsp</location>
+    </error-page>
 
 </web-app>
