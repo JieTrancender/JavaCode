@@ -83,4 +83,17 @@
         <url-pattern>/BHttpServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>LoginHttpServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.forward.LoginHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginHttpServlet</servlet-name>
+        <url-pattern>/LoginHttpServlet</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
 </web-app>

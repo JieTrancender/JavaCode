@@ -10,7 +10,7 @@
 
 <%--java代码片段--%>
 <%
-String path = request.getContextPath();
+  String path = request.getContextPath();
 /**
  * http://localhost:8080/welcome/
  */
@@ -29,6 +29,26 @@ String path = request.getContextPath();
     <br>
     <a href="../src/test.html" >Go to test.html</a>
     <br>
+    <%
+      int a = 10;
+    %>
+
+    <%
+      out.print(a);
+    %>
+    <%=a%>
+    <br/>
+    <%!
+      int a = 100;
+      public void fun() {
+          System.out.println(a);
+      }
+    %>
+    <%
+      out.print(this.a++);
+      fun();
+    %>
+
     ${header['User-Agent']};
   </body>
 </html>

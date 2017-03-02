@@ -17,9 +17,26 @@ public class BHttpServlet extends HttpServlet {
          * 在获取参数之前，需要先调用request.setCharacterEncoding("utf-8")
          * 使用getParameter获取参数
          */
-        request.setCharacterEncoding("utf-8");
-        String userName = request.getParameter("userName");
-        System.out.println(userName);
+//        request.setCharacterEncoding("utf-8");
+//        String userName = request.getParameter("userName");
+//        System.out.println(userName);
+
+        /**
+         * jsp计算整数降价相加
+         */
+        String s1 = request.getParameter("num1");
+        String s2 = request.getParameter("num2");
+
+        int num1 = Integer.parseInt(s1);
+        int num2 = Integer.parseInt(s2);
+
+        int sum = num1 + num2;
+
+        request.setAttribute("result", sum);
+        System.out.println("result = " + sum);
+
+        //转换到result.jsp
+        request.getRequestDispatcher("/jsps/result.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

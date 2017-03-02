@@ -29,6 +29,26 @@
     <br>
     <a href="../src/test.html" >Go to test.html</a>
     <br>
+    <%
+      int a = 10;
+    %>
+
+    <%
+      out.print(a);
+    %>
+    <%=a%>
+    <br/>
+    <%!
+      int a = 100;
+      public void fun() {
+          System.out.println(a);
+      }
+    %>
+    <%
+      out.print(this.a++);
+      fun();
+    %>
+
     ${header['User-Agent']};
   </body>
 </html>
