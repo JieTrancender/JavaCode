@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 @WebServlet(name = "/FirstHttpServlet")
 public class FirstHttpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -57,5 +57,17 @@ public class FirstHttpServlet extends HttpServlet {
         /**
          * 使用Referer请求头，来防盗链
          */
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter out = response.getWriter();
+
+        String referer = request.getHeader("referer");
+        String sitePart = request.getScheme() + getServletName();
+//        String sitePart = "http://" + request.getServerName();
+
+        if (referer != null && referer.startsWith(sitePart)) {
+            out.println("正在处理你的请求");
+        } else {
+            request.getRequestDispatcher("session/login.jsp").forward(request, response);
+        }
     }
 }

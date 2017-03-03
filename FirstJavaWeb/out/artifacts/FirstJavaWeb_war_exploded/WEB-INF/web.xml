@@ -21,6 +21,12 @@
         <load-on-startup>0</load-on-startup>
     </servlet-mapping>
 
+    <!--针对整个应用程序-->
+    <context-param>
+        <param-name>@Admin</param-name>
+        <param-value>JTrancender</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>YYY</servlet-name>
         <servlet-class>org.jason.web.servlet.FifthServlet</servlet-class>

@@ -100,7 +100,7 @@ public class SecondHttpServlet extends HttpServlet {
         response.getWriter().print(request.getRequestURL() + "<br/>");
 
         /**
-         * 使用Referer庆丘头，来防盗链
+         * 使用Referer请求头，来防盗链
          */
         String referer = request.getHeader("Referer");
         System.out.println(referer);

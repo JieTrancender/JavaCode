@@ -1082,4 +1082,260 @@ service方法在每次处理请求的时候都会被调用，是生命周期方�
         ...
       }
     }
-</code></pre></article></body></html>
+</code></pre>
+<h5 id="class-genericservlet"><a name="user-content-class-genericservlet" href="#class-genericservlet" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class GenericServlet</h5>
+<blockquote>
+<p>public abstract class GenericServlet extends Object implements Servlet, ServletConfig, Serialiable<br />
+private ServletConfig config</p>
+</blockquote>
+<ol>
+<li><strong>void init(ServletConfig servletConfig)</strong> - Servlet容器调用用来指定一个Servlet用于提供服务</li>
+<li><strong>void init()</strong> - 用于派生类重载(不用调用基类的<strong>super.init(config)</strong>)</li>
+<li><strong>String getInitParameter(String name)</strong> - 根据配置文件中的<code>param-name</code>获取<code>`param-value</code></li>
+<li><strong>Enumeration getInitParameterNames()</strong> - 获取配置文件中的所有<code>param-name</code></li>
+<li>
+<p>**String getServletName</p>
+<pre><code>//配置文件中
+&lt;init-param&gt;
+  &lt;param-name&gt;@Author&lt;/param-name&gt;
+  &lt;param-value&gt;Jason&lt;/param-value&gt;
+&lt;/init-param&gt;
+
+//Servlet文件中
+Enumeration e = getInitParameterNames();
+while (e.hasMoreElemetns()) {
+  String paramName = (String)e.nextElement();
+  System.out.println(paramName + ": " + getInitParameter(paramName));
+}
+</code></pre>
+</li>
+<li>
+<p><strong>ServletContext getServletContext()</strong> - 获取一个ServletContext的引用</p>
+<blockquote>
+<p>ServletContext对象在Web应用程序装载时初始化，会与每一个ServletContext对象关联</p>
+</blockquote>
+<pre><code>//配置文件中
+&lt;context-param&gt;
+  &lt;param-name&gt;@Admin&lt;/param-name&gt;
+  &lt;param-value&gt;JTrancender&lt;/param-value&gt;
+&lt;/context-param&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>ServletConfig getServletConfig()</strong> - 获取该Servlet的ServletConfig对象</p>
+</li>
+<li><strong>String getServletInfo()</strong> - 获取Servlet的信息</li>
+<li><strong>String getServletName()</strong> - 获取Servlet的名称</li>
+<li><strong>void log(String msg)</strong> - 写msg到Servlet log文件</li>
+<li><strong>void log(String msg, Throwable t)</strong> - 写msg和栈回溯到log文件</li>
+<li><strong>abstract void service(ServletRequest servletRequest, ServletResponse servletResponse)</strong> - Servlet容器调用用来允许servlet对请求做出回应</li>
+<li><strong>void destroy()</strong> - Servlet容器指定servlet退出服务</li>
+</ol>
+<h5 id="class-httpservlet"><a name="user-content-class-httpservlet" href="#class-httpservlet" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class HttpServlet</h5>
+<blockquote>
+<p>public abstract class HttpServlet extends GenericServlet implements Sericalizable</p>
+</blockquote>
+<ol>
+<li><strong>protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</strong> - server允许servlet处理一个Get request</li>
+<li><strong>protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</strong> - server允许servlet处理一个Post request</li>
+</ol>
+<blockquote>
+<p>类似地方法还有 <strong>doDelete</strong>、<strong>doPut</strong>、<strong>doTrace</strong>、<strong>doOptions</strong></p>
+</blockquote>
+<ol>
+<li><strong>protected void doHead(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</strong> - 从service收到HTTP头请求并且处理这个请求</li>
+<li><strong>protected long getLastModified(HttpServletRequest httpServletRequest)</strong> - 获取该对象的最后修改时间，1970-1-1到现在的毫秒数</li>
+<li><strong>protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</strong> - 收到标准HTTP请求并且分派他们到doXXX方法</li>
+<li><strong>void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</strong> - 分派client请求到service方法</li>
+</ol>
+<h5 id="http"><a name="user-content-http" href="#http" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HTTP使用</h5>
+<ol>
+<li>
+<p>重定向</p>
+<blockquote>
+<ol>
+<li>设置Location</li>
+<li>发送302状态码</li>
+</ol>
+</blockquote>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  response.setHeader("Location", "/LocationHttpServlet");
+  response.setStatus(302);
+
+  //快速重定向方法
+  response.sendRedirect("/LocationHttpServlet");
+}
+</code></pre>
+</li>
+<li>
+<p>Refresh响应头</p>
+<blockquote>
+<ol>
+<li>发送响应体</li>
+<li>设置Refresh的响应头</li>
+</ol>
+</blockquote>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  PrintWriter printWriter = response.getWriter();
+  printWriter.print("欢迎登录，4秒钟后自动跳转到主页.");
+  response.setHeader("Refresh", "5;URL=/RefreshHttpServlet");
+}
+</code></pre>
+</li>
+<li>
+<p>禁用浏览器缓存</p>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  response.setHeader("Cache-Control", "no-cache");
+  response.setHeader("pragma", "no-cache");
+  response.setDateHeader("expires", 0);
+  response.setHeader("keywords", "keyword1, keyword2");
+}
+</code></pre>
+</li>
+<li>
+<p>使用Referer请求头，来防盗链</p>
+<pre><code>protected void doPost(HttpServletRequest request, HttpServletResponse) {
+  doGet(request, response);
+}
+
+protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  response.setContentType("text/html;charset=utf-8");
+  PrintWriter printWriter = response.getWriter();
+
+  String referer = request.getHeader("referer");
+  String sitePart = request.getScheme() + request.getServerName();
+
+  if (null != referer &amp;&amp; referer.startsWith(sitePart)) {
+    out.println("正在处理你的请求");
+  } else {
+    //转发到登录页或者其它广告页
+    request.getRequestDispatcher("Login.jsp").forward(request, response);
+  }
+}
+</code></pre>
+</li>
+</ol>
+<h5 id="interface-servletrequest"><a name="user-content-interface-servletrequest" href="#interface-servletrequest" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Interface ServletRequest</h5>
+<blockquote>
+<p>public interface ServletRequest<br />
+javax.servlet</p>
+</blockquote>
+<ol>
+<li><strong>Object getAttribute(String name)</strong> - 获取name属性的值(null)</li>
+<li><strong>Enumeration getAttributeNames()</strong> - 获取request的所有属性名</li>
+<li><strong>String getParameter(String name)</strong> - 获取name参数的值(null)</li>
+<li><strong>String getParameterValues(String name)</strong> - 获取name参数的值(多值)</li>
+<li><strong>String getCharacterEncoding()</strong> - 获取编码类型</li>
+<li><strong>int getContentLength()</strong> - 获取request体的字节长度(-1)</li>
+<li><strong>String getContentType()</strong> - 获取MIME type(null)</li>
+<li><strong>ServletInputStream getInputStream()</strong> - 获取request体的二进制流</li>
+<li><strong>String getLocalAddr()</strong> - 获取IP地址</li>
+<li><strong>String getLocalName()</strong></li>
+<li><strong>int getLocalPort()</strong></li>
+<li><strong>String getProtocol()</strong> - 获取HTTP版本</li>
+<li><strong>BufferedReader getReader()</strong> - 获取请求体</li>
+<li><strong>String getRemoteAddr()</strong> - 获取客户端IP地址</li>
+<li><strong>String getRemoteHost()</strong> - 获取客户机最后的代理地址</li>
+<li><strong>int getRemotePort()</strong></li>
+<li><strong>String getScheme()</strong> - 获取协议头(http,https,ftp)</li>
+<li><strong>int getServerPort()</strong></li>
+<li><strong>boolean isSecure()</strong> - 是否使用安全信道(HTTPS)</li>
+<li><strong>void removeAttribute(String name)</strong></li>
+<li><strong>void setAttribute(String name, Object o))</strong></li>
+<li><strong>void setCharacterEncoding(String env)</strong></li>
+</ol>
+<h5 id="httpservletrequest"><a name="user-content-httpservletrequest" href="#httpservletrequest" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HttpServletRequest</h5>
+<blockquote>
+<p>public interface HttpServletRequest extends ServletRequest<br />
+javax.servlet.http</p>
+</blockquote>
+<ol>
+<li><strong>String getParameter(String name)</strong> - 获取name参数的值(null)</li>
+<li>
+<p><strong>String getParameterValues(String name)</strong> - 获取name参数的值(多值)</p>
+<pre><code>protected void doPost(HttpServletRequest request, HttpServletResponse) {
+  String userName = request.getParameter("userName");
+  String password = request.getParameter("password");
+  String[] hobby = request.getParameterValues("hobby");
+
+  System.out.println(userName + ", " + password + ", " + Arrays.toString(hobby));
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Enumeration getParameterNames()</strong> - 获取所有的参数名</p>
+<pre><code>protected void doPost(HttpServletRequest request, HttpServletResponse) {
+  Enumeration names = request.getParamerterNames();
+  while (names.hasMoreElements()) {
+    System.out.println(names.nextElement());
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Map getParameterMap()</strong> - 获取request参数到map中</p>
+<pre><code>protected void doPost(HttpServletRequest request, HttpServletResponse) {
+  Map&lt;String, String[]&gt; map = request.getParameterMap();
+  for (String name : map.keySet()) {
+    String[] values = map.get(name);
+    System.out.println(name + ": " + Arrays.toString(values));
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>字符流和字节流不能混用</p>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  //字节流
+  response.getWriter().print("Welcome to jie-trancender.org");
+
+  //字符流
+  String str = "Hello JTrancender";
+  byte[] bytes = str.setBytes();
+  response.getOutputStream().write(bytes);
+
+  //响应字节数据
+  String path = "F:/ming_rong.png";
+  FileInputStream in = new FileInputStream(path);
+  byte[] bytes;
+  try {
+    bytes = readInputStream(in);
+  } catch (Exception e) {
+    bytes = null;
+    e.printStackTrace();
+  }
+
+  response.getOutputStream().write(bytes);
+}
+</code></pre>
+</li>
+<li>
+<p>获取客户端信息</p>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  String addr = request.getRemoteAddr();
+  System.out.println("IP: " + addr);
+  System.out.println("请求方式: " + request.getMethod());
+
+  String userAgent = request.getHeader("User-Agent");
+  if (userAgent.toLowerCase().contains("chrome")) {
+    System.out.println("Your ip is " + addr ", request method is " + request.getMethod());
+  } else if (....) {
+    ......
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>获取URL</p>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  response.getWriter().print(request.getScheme() + "&lt;br/&gt;");
+  response.getWriter().print(request.getServerName() + "&lt;br/&gt;");
+  response.getWriter().print(request.getServerPort() + "&lt;br/&gt;");
+  response.getWriter().print(request.getContextPath() + "&lt;br/&gt;");
+  response.getWriter().print(request.getServletPath() + "&lt;br/&gt;");
+  response.getWriter().print(request.getQueryString() + "&lt;br/&gt;");
+  response.getWriter().print(request.getRequestURL() + "&lt;br/&gt;");
+}
+</code></pre>
+</li>
+</ol></article></body></html>
