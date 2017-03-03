@@ -1338,4 +1338,68 @@ javax.servlet.http</p>
 }
 </code></pre>
 </li>
+<li>
+<p>请求转发</p>
+<blockquote>
+<p>转发留头不留尾</p>
+</blockquote>
+<pre><code>protected void doGet(HttpServletRequest request, HttpServletResponse) {
+  //头，可用
+  response.setHeader("@Auther", "Jason");
+
+  //尾，不可用，直接忽略
+  for (int i = 0; i &lt; 24 * 1024 + 1; ++i)
+}
+</code></pre>
+</li>
+</ol>
+<p>AHttpServlet.java</p>
+<h5 id="jstl-corec"><a name="user-content-jstl-corec" href="#jstl-corec" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>JSTL - core(c标签)</h5>
+<ol>
+<li>
+<p>out和set</p>
+<blockquote>
+<p>&lt;c:out&gt;: 输出</p>
+</blockquote>
+<pre><code>* value: 可以使字符串常量，也可以是EL表达式
+* default: 当要输出的内容为null时，会输出default指定的值
+* escapeXml: 默认值为true，表示转义
+</code></pre>
+<blockquote>
+<p>&lt;c:set&gt;: 设置(创建域的属性)</p>
+</blockquote>
+<pre><code>* var: 变量名
+* value: 变量值
+* scope: 域，默认为page，可选值: page、request、session、application
+</code></pre>
+</li>
+<li>
+<p>remove</p>
+<blockquote>
+<p>&lt;remove&gt;: 删除域变量</p>
+</blockquote>
+<pre><code>* var: 变量名
+* scope: 如果不给出scope，表示删除所有域中的该名称的变量；如果指定了域，那么只删除该域
+</code></pre>
+</li>
+<li>
+<p>url</p>
+<blockquote>
+<p>value: 制定一个路径，它会在路径前面自动添加 项目名</p>
+</blockquote>
+<pre><code>&lt;c:url value = "/index.jsp"/&gt;,它会输出/project/index.jsp
+</code></pre>
+<blockquote>
+<p>子标签: &lt;c:param&gt;,用来给url后面添加参数</p>
+</blockquote>
+<pre><code>&lt;c:url value = "/index.jsp"&gt;
+  &lt;c:param name = "userName" value = "张三"/&gt;
+&lt;/c:url&gt;
+结果为: /project/index.jsp?userName=%ED%FE%3E... &lt;!--可以对参数进行url编码 --&gt;
+</code></pre>
+<blockquote>
+<p>var: 指定变量名，一单添加了这个属性，那么url标签就不会在输出到页面，二十八生成的url保存到域<br />
+scope: 域var一起使用，用来保存url</p>
+</blockquote>
+</li>
 </ol></article></body></html>

@@ -46,4 +46,13 @@ public class Person {
     public Person() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "userName='" + userName + '\'' +
+                ", userAge=" + userAge +
+                ", userGender='" + userGender + '\'' +
+                '}';
+    }
 }

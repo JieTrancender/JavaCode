@@ -302,3 +302,51 @@
         }
 
 AHttpServlet.java
+
+
+
+
+
+
+
+
+
+
+##### JSTL - core(c标签)
+
+1. out和set
+
+    > &lt;c:out&gt;: 输出
+    
+        * value: 可以使字符串常量，也可以是EL表达式
+        * default: 当要输出的内容为null时，会输出default指定的值
+        * escapeXml: 默认值为true，表示转义
+
+    > &lt;c:set&gt;: 设置(创建域的属性)
+    
+        * var: 变量名
+        * value: 变量值
+        * scope: 域，默认为page，可选值: page、request、session、application
+        
+2. remove
+
+    > &lt;remove&gt;: 删除域变量
+    
+        * var: 变量名
+        * scope: 如果不给出scope，表示删除所有域中的该名称的变量；如果指定了域，那么只删除该域
+      
+3. url
+
+    > value: 制定一个路径，它会在路径前面自动添加 项目名
+
+        <c:url value = "/index.jsp"/>,它会输出/project/index.jsp
+
+     > 子标签: &lt;c:param&gt;,用来给url后面添加参数
+   
+        <c:url value = "/index.jsp">
+          <c:param name = "userName" value = "张三"/>
+        </c:url>
+        结果为: /project/index.jsp?userName=%ED%FE%3E... <!--可以对参数进行url编码 -->
+
+    > var: 指定变量名，一单添加了这个属性，那么url标签就不会在输出到页面，二十八生成的url保存到域
+    > scope: 域var一起使用，用来保存url

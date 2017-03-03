@@ -7,6 +7,8 @@
 --%>
 <%--jsp指令，也是一种特殊的标签--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="ja" uri="/WEB-INF/tlds/jason-tag.tld"%>
+<%--<%@ taglib prefix="js" uri="/WEB-INF/tlds/jason-tag.tld" %>--%>
 
 <%--java代码片段--%>
 <%
@@ -52,5 +54,24 @@
     <a href="/FirstHttpServlet">进入下载页面</a>
 
     ${header['User-Agent']};
+  <br/>
+  <h1><ja:MyTag/></h1><br/>
+  <h1><ja:MySimpleTagSupport/></h1>
+  <hr/>
+
+  <%
+    request.setAttribute("xxx", "zhangSan");
+  %>
+
+  <h3>
+    <ja:MySecondSimpleTagSupport>
+      ${xxx}<br/>
+    </ja:MySecondSimpleTagSupport>
+    <br/>
+    <ja:MySecondSimpleTagSupport>
+      我是JTrancender<br/>
+    </ja:MySecondSimpleTagSupport>
+    <h1>这下面的内容都显示不出来的</h1>
+  </h3>
   </body>
 </html>
