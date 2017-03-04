@@ -107,6 +107,15 @@
         <url-pattern>/VerifyHttpServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>org.jason.web.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>

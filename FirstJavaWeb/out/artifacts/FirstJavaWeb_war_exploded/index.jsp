@@ -8,6 +8,7 @@
 <%--jsp指令，也是一种特殊的标签--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="ja" uri="/WEB-INF/tlds/jason-tag.tld"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--<%@ taglib prefix="js" uri="/WEB-INF/tlds/jason-tag.tld" %>--%>
 
 <%--java代码片段--%>
@@ -55,8 +56,8 @@
 
     ${header['User-Agent']};
   <br/>
-  <h1><ja:MyTag/></h1><br/>
-  <h1><ja:MySimpleTagSupport/></h1>
+  <%--<h1><ja:MyTag/></h1><br/>--%>
+  <%--<h1><ja:MySimpleTagSupport/></h1>--%>
   <hr/>
 
   <%
@@ -64,14 +65,21 @@
   %>
 
   <h3>
-    <ja:MySecondSimpleTagSupport>
-      ${xxx}<br/>
-    </ja:MySecondSimpleTagSupport>
+
+    <%--<ja:MySecondSimpleTagSupport>--%>
+      <%--${xxx}<br/>--%>
+    <%--</ja:MySecondSimpleTagSupport>--%>
     <br/>
-    <ja:MySecondSimpleTagSupport>
-      我是JTrancender<br/>
-    </ja:MySecondSimpleTagSupport>
+    <%--<ja:MySecondSimpleTagSupport>--%>
+      <%--我是JTrancender<br/>--%>
+    <%--</ja:MySecondSimpleTagSupport>--%>
     <h1>这下面的内容都显示不出来的</h1>
+    <ja:MySecondSimpleTagSupport test="${ not empty param.xxx}">
+      <h1>MingEr, I miss you.</h1>
+    </ja:MySecondSimpleTagSupport>
+    <h1>测试自定义标签</h1><br/>
+
+      <a href="<c:url value = '/UserServlet'/>">点击这里查看</a>
   </h3>
   </body>
 </html>

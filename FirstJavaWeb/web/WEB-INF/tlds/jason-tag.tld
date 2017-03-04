@@ -29,7 +29,9 @@
         <tag-class>org.jason.tag.MySecondSimpleTagSupport</tag-class>
         <body-content>scriptless</body-content>
         <attribute>
-            <name></name>
+            <name>test</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
 </taglib>

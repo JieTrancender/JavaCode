@@ -2,6 +2,7 @@ package org.jason.domain;
 
 /**
  * Created by JTrancender on 2017/3/3.
+ * 把数据库中查询出的结果保存到这个对象中
  */
 public class User {
     private String userName;
