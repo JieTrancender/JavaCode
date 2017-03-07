@@ -350,3 +350,39 @@ AHttpServlet.java
 
     > var: 指定变量名，一单添加了这个属性，那么url标签就不会在输出到页面，二十八生成的url保存到域
     > scope: 域var一起使用，用来保存url
+
+4. if: 对应java中的if语句
+
+        <c:if test="布尔类型">...</c:if>,党test为真时，执行标签体的内容
+
+5. choose: 它对应java中的if/else if/.../else
+
+        <c:choose>
+          <c:when test="">...</c:when>
+          <c:when test="">...</c:when>
+          <c:otherwish>...</c:otherwish>
+        </c:choose>
+
+6. forEach
+
+    > 用来循环遍历数组、集合
+    > 还可以以计数方式来循环
+    
+        //计数方式
+        for (int i = 0; i < 10; i += 2) {
+
+        }
+
+        <c:forEach var = "i" begin="1" end="10" step = "2">
+          ${i}<br/>
+        </c:forEach>
+
+        //数组、集合方式
+        for(String str: strs) {
+
+        }
+
+        <c:forEach items="${strs}" var = "str">
+          ${str}<br/>
+        </c:forEach>
+
