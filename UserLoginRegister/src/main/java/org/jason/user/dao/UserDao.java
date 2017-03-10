@@ -18,7 +18,7 @@ public class UserDao {
     private String path = "F:/JavaCode/users.xml";
 
     /**
-     * 按用户名查找
+     * Function: 按用户名查找
      * @param userName
      * @return
      */
@@ -51,7 +51,7 @@ public class UserDao {
     }
 
     /**
-     * 添加用户
+     * Function: 添加用户到文件或者数据库
      */
     public void add(User user) {
         /**
@@ -95,5 +95,12 @@ public class UserDao {
         } catch (DocumentException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Function: 获取User验证码
+     */
+    public String getVerifyCode(User user) {
+        return user.getVerifyCode();
     }
 }

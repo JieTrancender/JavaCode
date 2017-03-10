@@ -14,11 +14,20 @@
   <title>Title</title>
 </head>
 <%
-  String msg = "";
+  String message = "";
+  String msg = (String) request.getAttribute("msg");
+  if (null != msg) {
+      message = msg;
+  }
 %>
 <body>
+  <%--${requestScope.}--%>
   <h1>注册页面</h1>
-  <p style = "color: red; font-weight: 900;">${msg }</p>
+  <%--<p style = "color: red; font-weight: 900;">${msg }</p>--%>
+  <%--<p style="color:red;">${pageContext.request.getAttribut("msg")}</p>--%>
+  <p style = "color: red; font-weight: bold;">
+    <%= message %>
+  </p>
   <%--<form action="${pageContext.request.contextPath}/../../RegisterServlet" method="post">--%>
   <%--<form action="<c:url value='/RegisterServlet'/>" method="post">--%>
   <form action="<c:url value="/RegisterServlet"/> " method="post">
