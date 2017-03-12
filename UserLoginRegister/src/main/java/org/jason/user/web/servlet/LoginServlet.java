@@ -7,9 +7,7 @@ import org.jason.user.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
@@ -37,13 +35,26 @@ public class LoginServlet extends HttpServlet {
          *   ③. 得到异常，保存异常信息到request域中，转发到login.jgp中
          *   ④. 没有异常，向下运行
          */
-        String paramCode = request.getParameter("verifyCode");
+        String verifyCode = (String) request.getSession().getAttribute("verifyCode");
 
         try {
-            userService.checkVerifyCode(user, paramCode);
+            userService.checkVerifyCode(user, verifyCode);
+
+            /**
+             * 附加项:将用户名保存到Cookie中，发送给客户端浏览器
+             * 当再次打开login.jsp时，login.jsp中会读取request中的Cookie
+             */
+            Cookie cookie = new Cookie("userName", user.getUserName());
+            cookie.setMaxAge(60 * 60 * 24 * 30);  //设置Cookie的生存时长为一个月
+            response.addCookie(cookie);
         } catch (UserException e) {
             request.setAttribute("msg", e.getMessage());
+            /**
+             * 附加项: 将user对象信息封装到request域中，发生错误回退登录页面时自动输入登录数据
+             */
+            request.setAttribute("userInfo", user);
             request.getRequestDispatcher("/user/login.jsp").forward(request, response);
+            return;
         }
 
         /**
@@ -53,35 +64,30 @@ public class LoginServlet extends HttpServlet {
          *   ③. 没有异常，向下运行
          */
 
-        String verifyCode = (String) request.getSession().getAttribute("verifyCode");
+        try {
+            userService.login(user);
 
-        if (!paramCode.equalsIgnoreCase(verifyCode)) {
-            request.setAttribute("msg", "验证码错误");
+            /**
+             * 4. 登录成功
+             *   ①. 保存用户信息到Session中
+             *   ②. 重定向到welcome.jsp
+             */
+            HttpSession session = request.getSession();
+            session.setAttribute("sessionUser", user.getUserName());
+
+            response.sendRedirect("/user/welcome.jsp");
+        } catch (UserException e) {
+            request.setAttribute("msg", e.getMessage());
+            /**
+             * 附加项: 将user对象信息封装到request域中，发生错误回退登录页面时自动输入登录数据
+             */
+            request.setAttribute("userInfo", user);
             request.getRequestDispatcher("/user/login.jsp").forward(request, response);
             return;
         }
-
-
-
-
-
-
-
-
-
-
-        /**
-         * 1. 将表单数据封装到User对象中
-         * 2. 调用userService的login方法传递form过去
-         * 3. 得到异常，获取异常，保存到request域中，转发到login.jsp中
-         * 4. 没有异常，跳转到主页
-         */
-//        try {
-//            userService.login();
-//        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("/user/login.jsp").forward(request, response);
     }
 }
