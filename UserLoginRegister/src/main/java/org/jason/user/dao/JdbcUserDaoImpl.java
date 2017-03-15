@@ -1,7 +1,7 @@
 package org.jason.user.dao;
 
 import com.mysql.jdbc.PreparedStatement;
-import org.jason.commons.JdbcUtils;
+import org.jason.commons.OldJdbcUtils;
 import org.jason.user.domain.User;
 
 import java.sql.Connection;
@@ -23,7 +23,7 @@ public class JdbcUserDaoImpl implements UserDao {
         PreparedStatement pstmt = null;
 
         try {
-            conn = JdbcUtils.getConnection();
+            conn = OldJdbcUtils.getConnection();
 
             String sql = "insert into user values(?,?,?,?)";
             pstmt = (PreparedStatement) conn.prepareStatement(sql);
@@ -54,7 +54,7 @@ public class JdbcUserDaoImpl implements UserDao {
         ResultSet resultSet = null;
 
         try {
-            conn = JdbcUtils.getConnection();
+            conn = OldJdbcUtils.getConnection();
 
             String sql = "select * from user where username=?";
             pstmt = (PreparedStatement) conn.prepareStatement(sql);

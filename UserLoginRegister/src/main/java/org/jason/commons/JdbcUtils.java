@@ -1,54 +1,89 @@
 package org.jason.commons;
 
-import com.mysql.jdbc.Connection;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.sql.DriverManager;
+import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Properties;
 
 /**
- * Created by JTrancender on 2017/3/12.
+ * Created by JTrancender on 2017/3/15.
  */
 public class JdbcUtils {
-    private static Properties properties = null;
+    //使用配置文件中的默认配置，必须存在c3p0-config.xml
+    private static ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
+    //事务专用连接
+    private static ThreadLocal<Connection> connectionThreadLocal = new ThreadLocal<Connection>();
+//    private static Connection conn = null;
 
-    //只在JdbcUtils类被加载时执行一次
-    static {
-        //给properties进行初始化，即加载dbconfig.properties文件到properties对象中
-        try {
-            InputStream inputStream = JdbcUtils.class.getResourceAsStream("/dbconfig.properties");
-            properties = new Properties();
-            properties.load(inputStream);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        //加载驱动类
-        try {
-            Class.forName(properties.getProperty("test.db.driverClassName"));
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
     public static Connection getConnection() throws SQLException {
-        return (Connection) DriverManager.getConnection(properties.getProperty("test.db.url") + "?useSSL=false&rewriteBatchedStatements=true",
-                properties.getProperty("test.db.userName"),
-                properties.getProperty("test.db.password"));
+        Connection conn = connectionThreadLocal.get();
+        if (conn != null) {
+            return conn;
+        }
+        return comboPooledDataSource.getConnection();
+    }
 
-//        Enumeration enumeration = properties.propertyNames();
-//        while (enumeration.hasMoreElements()) {
-//            String key = (String) enumeration.nextElement();
-//            String value = properties.getProperty(key);
-//            System.out.println(key + "=" + value);
-//        }
-//        String driverClassName = properties.getProperty("test.db.driverClassName");
-//        String url = properties.getProperty("test.db.url") + "?useSSL=false";
-//        String userName = properties.getProperty("test.db.userName");
-//        String password = properties.getProperty("test.db.password");
+    public static DataSource getDataSource() {
+        return comboPooledDataSource;
+    }
 
-//        Class.forName(driverClassName);
-//        Connection connection = (Connection) DriverManager.getConnection(url, userName, password);
+    /**
+     * 开启事务
+     *   1. 获取一个Connection，设置 他的setAutoCommit(false)
+     *   2. 保证Dao中使用的链接使我们刚刚创建的
+     */
+    public static void beginTransaction() throws SQLException {
+        Connection conn = connectionThreadLocal.get();
+        if (conn != null) {
+            throw new SQLException("已经开启事务了，不要重复开启事务！");
+        }
+        conn = getConnection();
+        conn.setAutoCommit(false);
+        connectionThreadLocal.set(conn);
+    }
+
+    /**
+     * 提交事务
+     *   获取beginTransaction提供的Connection
+     */
+    public static void commitTransaction() throws SQLException {
+        Connection conn = connectionThreadLocal.get();
+        if (conn == null) {
+            throw new SQLException("没有开启事务，不能提交！");
+        }
+        conn.commit();
+        conn.close();
+//        conn = null;
+        connectionThreadLocal.remove();  //从connectionThreadLocal里面移除
+    }
+
+    public static void rollbackTransaction() throws SQLException {
+        Connection conn = connectionThreadLocal.get();
+        if (conn == null) {
+            throw new SQLException("没有开启事务，不能回滚！");
+        }
+        conn.rollback();
+        conn.close();
+//        conn = null;
+        connectionThreadLocal.remove();
+    }
+
+    /**
+     * 释放连接
+     *   如果是事务专用，就不关闭
+     *   如果不是事务专用，就关闭
+     * @param connection
+     */
+    public static void releaseConnection(Connection connection) throws SQLException {
+        Connection conn = connectionThreadLocal.get();
+        if (connection == null) {
+            connection.close();
+        }
+
+        //如果不与事务专用连接相等，就不是事务
+        if (conn != connection) {
+            connection.close();
+        }
     }
 }

@@ -1,6 +1,6 @@
 package org.jason.account;
 
-import org.jason.commons.JdbcUtils;
+import org.jason.commons.OldJdbcUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -13,12 +13,12 @@ public class Account {
     public void transfer(String from, String to, double money) {
         Connection conn = null;
         try {
-            conn = JdbcUtils.getConnection();
+            conn = OldJdbcUtils.getConnection();
             conn.setAutoCommit(false);
 
             AccountDao accountDao = new AccountDao();
-            accountDao.updateBalance(conn, from, -money);
-            accountDao.updateBalance(conn, to, money);
+            accountDao.updateBalance(from, -money);
+            accountDao.updateBalance(to, money);
 
             conn.commit();
             conn.close();

@@ -1,11 +1,11 @@
 package org.jason.user.test;
 
-import org.jason.commons.JdbcUtils;
+import org.jason.commons.OldJdbcUtils;
 import org.junit.Test;
 
 import java.sql.*;
 
-import static org.jason.commons.JdbcUtils.getConnection;
+import static org.jason.commons.OldJdbcUtils.getConnection;
 
 /**
  * Created by JTrancender on 2017/3/11.
@@ -222,7 +222,7 @@ public class MysqlTest {
 
     @Test
     public void testBatching() throws SQLException {
-        Connection conn = JdbcUtils.getConnection();
+        Connection conn = OldJdbcUtils.getConnection();
         String sql = "insert into user values(?,?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 

@@ -2,7 +2,7 @@ package org.jason.user.test;
 
 //import com.mysql.jdbc.Blob;
 import org.apache.commons.io.IOUtils;
-import org.jason.commons.JdbcUtils;
+import org.jason.commons.OldJdbcUtils;
 import org.junit.Test;
 
 //import javax.sql.rowset.serial.SerialBlob;
@@ -16,7 +16,7 @@ import java.sql.*;
 public class BigDataTest {
     @Test
     public void testSaveFile() throws SQLException, IOException {
-        Connection conn = JdbcUtils.getConnection();
+        Connection conn = OldJdbcUtils.getConnection();
         String sql = "insert into tab_bin values(?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -33,7 +33,7 @@ public class BigDataTest {
 
     @Test
     public void testReadFile() throws SQLException, IOException {
-        Connection conn = JdbcUtils.getConnection();
+        Connection conn = OldJdbcUtils.getConnection();
 
         String sql = "select * from tab_bin";
 
