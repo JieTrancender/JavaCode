@@ -2,21 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31707bc4-49eb-4d16-b453-7f4ce6f687b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/account/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/account/AccountDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/resources/c3p0-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/C3P0.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/DBCPTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/MySQLTransaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/UserLoginRegister_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/UserLoginRegister_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4286296e-c492-4bde-b175-90f6e7f9346c.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4286296e-c492-4bde-b175-90f6e7f9346c.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/dbconfig.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/commons/CommonUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/commons/JdbcUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/commons/VerifyCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/course/web/servlet/HttpHeaderServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/dao/DaoFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/dao/JdbcUserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/dao/UserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/domain/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/service/UserException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/web/servlet/LoginServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/web/servlet/RegisterServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/org/jason/user/web/servlet/VerifyServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/src/main/webapp/user/welcome.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/user/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/classes/src/main/webapp/user/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/JWProject/WEB-INF/classes/target/classes/target/JWProject/user/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/classes/users.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/javax.servlet.jsp-api-2.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/jaxen-1.1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/junit-4.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/course/get_header.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/js/login-register.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/user/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/user/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/JWProject/user/welcome.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/dbconfig.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/account/Account.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/account/AccountDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/commons/CommonUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/commons/JdbcUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/commons/VerifyCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/course/web/servlet/HttpHeaderServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/dao/DaoFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/dao/JdbcUserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/dao/UserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/domain/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/service/UserException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/web/servlet/LoginServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/web/servlet/RegisterServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/org/jason/user/web/servlet/VerifyServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/classes/users.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/BigDataTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/C3P0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/DBCPTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/MySQLTransaction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/MysqlTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../UserLoginRegister/target/test-classes/org/jason/user/test/UserDaoTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UserLoginRegister/UserLoginRegister.iml" afterPath="$PROJECT_DIR$/../UserLoginRegister/UserLoginRegister.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UserLoginRegister/pom.xml" afterPath="$PROJECT_DIR$/../UserLoginRegister/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../UserLoginRegister/target/" />
@@ -58,9 +117,10 @@
       <file leaf-file-name="MysqlTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/MysqlTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
+            <state relative-caret-position="1025">
               <caret line="240" column="8" lean-forward="false" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#func#0;class#MysqlTest#0" expanded="false" />
                 <element signature="method#testMysqlSelect#0;class#MysqlTest#0" expanded="false" />
                 <element signature="method#testJDBC#0;class#MysqlTest#0" expanded="false" />
@@ -83,11 +143,9 @@
       <file leaf-file-name="JdbcUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/commons/JdbcUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-              <folding>
-                <element signature="e#1269#1332#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,20 +153,18 @@
       <file leaf-file-name="DBCPTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/DBCPTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="350">
               <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            <state relative-caret-position="875">
+              <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -117,20 +173,18 @@
       <file leaf-file-name="C3P0.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/C3P0.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="950">
               <caret line="43" column="92" lean-forward="false" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c3p0-config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="c3p0-config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/resources/c3p0-config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -139,12 +193,9 @@
       <file leaf-file-name="BasicDataSource.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-dbcp2/2.1.1/commons-dbcp2-2.1.1.jar!/org/apache/commons/dbcp2/BasicDataSource.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="7600">
               <caret line="428" column="42" lean-forward="false" selection-start-line="428" selection-start-column="42" selection-end-line="428" selection-end-column="42" />
-              <folding>
-                <element signature="e#13565#13566#0" expanded="true" />
-                <element signature="e#13615#13616#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,7 +254,6 @@
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/user/web/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/BigDataTest.java" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/resources/dbconfig.properties" />
-        <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/commons/JdbcUtils.java" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/MysqlTest.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4286296e-c492-4bde-b175-90f6e7f9346c/console_1.sql" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/account/AccountDao.java" />
@@ -212,6 +262,7 @@
         <option value="$PROJECT_DIR$/../UserLoginRegister/pom.xml" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/resources/c3p0-config.xml" />
         <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/C3P0.java" />
+        <option value="$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/commons/JdbcUtils.java" />
       </list>
     </option>
   </component>
@@ -243,11 +294,68 @@
   </component>
   <component name="MavenProjectNavigator">
     <option name="showVersions" value="true" />
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JWProject Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JWProject Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JWProject Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="clean" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JWProject Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="269" />
-    <option name="y" value="30" />
+    <option name="x" value="425" />
+    <option name="y" value="50" />
     <option name="width" value="1373" />
     <option name="height" value="936" />
   </component>
@@ -269,9 +377,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,74 +403,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserLoginRegister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserLoginRegister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserLoginRegister" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,7 +420,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jakarta-taglibs-standard-1.1.2/lib/standard.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UserLoginRegister/pom.xml" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RunManager" selected="JUnit.C3P0.testMysql">
@@ -839,6 +881,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
@@ -1085,6 +1149,7 @@
       <workItem from="1489279862427" duration="18028000" />
       <workItem from="1489452039945" duration="1217000" />
       <workItem from="1489545969905" duration="8364000" />
+      <workItem from="1489566648692" duration="713000" />
     </task>
     <servers />
   </component>
@@ -1121,7 +1186,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75613000" />
+    <option name="totallyTimeSpent" value="76326000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1133,14 +1198,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="269" y="30" width="1373" height="936" extended-state="0" />
+    <frame x="425" y="50" width="1373" height="936" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38202247" sideWeight="0.5049505" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239147" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239147" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1150,16 +1215,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32092005" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33707866" sideWeight="0.4960396" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.382793" sideWeight="0.4950495" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33042395" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20182787" sideWeight="0.49322033" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20487434" sideWeight="0.49322033" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19040366" sideWeight="0.5067797" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1167,7 +1230,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33707866" sideWeight="0.4960396" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33042395" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1335,7 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,11 +1534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1489290717557" expanded="true" signature="660:692" ph="insert into user... " />
-            <marker date="1489290717557" expanded="true" signature="1592:1627" ph="select * fro... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,10 +1541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1432#1448#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1512,15 +1567,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="45" lean-forward="false" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/MysqlTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
+        <state relative-caret-position="1025">
           <caret line="240" column="8" lean-forward="false" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#func#0;class#MysqlTest#0" expanded="false" />
             <element signature="method#testMysqlSelect#0;class#MysqlTest#0" expanded="false" />
             <element signature="method#testJDBC#0;class#MysqlTest#0" expanded="false" />
@@ -1543,7 +1598,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1556,7 +1610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="689">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1564,7 +1617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,7 +1632,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1593,11 +1644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#916#917#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1605,10 +1651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1489552159605" expanded="true" signature="444:493" ph="update accou... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1616,7 +1658,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1629,7 +1670,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1638,59 +1678,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/commons/JdbcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-          <folding>
-            <element signature="e#1269#1332#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-dbcp2/2.1.1/commons-dbcp2-2.1.1.jar!/org/apache/commons/dbcp2/BasicDataSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="7600">
           <caret line="428" column="42" lean-forward="false" selection-start-line="428" selection-start-column="42" selection-end-line="428" selection-end-column="42" />
-          <folding>
-            <element signature="e#13565#13566#0" expanded="true" />
-            <element signature="e#13615#13616#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/DBCPTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="350">
           <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../UserLoginRegister/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/test/org/jason/user/test/C3P0.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="950">
           <caret line="43" column="92" lean-forward="false" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/resources/c3p0-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../UserLoginRegister/src/main/java/org/jason/commons/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../UserLoginRegister/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="15" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding />
         </state>
       </provider>
