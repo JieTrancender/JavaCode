@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="UserLoginRegister" />
+        <module name="CustomerManage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CustomerManage" target="1.5" />
+      <module name="JWProject" target="1.5" />
       <module name="UserLoginRegister" target="1.5" />
     </bytecodeTargetLevel>
   </component>
