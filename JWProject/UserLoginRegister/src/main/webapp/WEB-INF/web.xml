@@ -25,6 +25,10 @@
     <servlet-name>ABaseServlet</servlet-name>
     <servlet-class>org.jason.course.web.servlet.ABaseServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>org.jason.message.board.web.sevlet.AddServlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -45,5 +49,9 @@
   <servlet-mapping>
     <servlet-name>ABaseServlet</servlet-name>
     <url-pattern>/ABaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
   </servlet-mapping>
 </web-app>

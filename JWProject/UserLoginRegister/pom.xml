@@ -6,8 +6,9 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>../JWProject</module>
-        <module>..</module>
+        <!--<module>../JWProject</module>-->
+        <!--<module>..</module>-->
+      <module>../UserLoginRegister</module>
       <module>../CustomerManage</module>
     </modules>
     <name>JWProject Maven Webapp</name>
@@ -68,6 +69,11 @@
       <artifactId>commons-dbutils</artifactId>
       <version>1.6</version>
     </dependency>
+      <dependency>
+          <groupId>org.jason</groupId>
+          <artifactId>CustomerManage</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>JWProject</finalName>
