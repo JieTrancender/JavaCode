@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE validation-config SYSTEM "F:\JavaCode\JWProject\MessageBoard\src\main\webapp\js\validation-config.dtd">
+<validation-config lang="auto">
+	<form id="form1" show-error="alert" show-type="all">
+		<field name="username" display-name="用户名" onfail="">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+		<field name="password" display-name="密码">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+	</form>
+	<form id="form2" show-error="errorDiv" onfail="" show-type="first">
+		<field name="username" display-name="用户名" onfail="">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+		<field name="password" display-name="密码">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+		<field name="confirm" display-name="确认密码">
+			<depend name="equalsField" param0="password"/>
+		</field>
+		<field name="gender" display-name="性别">
+			<depend name="required" />
+		</field>
+		<field name="interest" display-name="兴趣">
+			<depend name="required" />
+		</field>
+		<field name="email" display-name="Email">
+			<depend name="email"/>
+		</field>
+		<field name="age" display-name="年龄">
+			<depend name="integerRange" param0="15" param1="60"/>
+		</field>
+		<field name="cname" display-name="中文姓名">
+			<depend name="chineseChar"/>
+		</field>
+	</form>
+	<form id="add-msg-form" show-error="alert" show-type="all">
+		<field name="name" display-name="姓名" onfail="">
+			<depend name="required"/>
+			<!--<depend name="commonChar"/>-->
+			<depend name="minLength" param0="2"/>
+			<depend name="maxLength" param0="12"/>
+		</field>
+		<field name="phone" display-name="电话" onfail="">
+			<depend name="required"/>
+			<depend name="minLength" param0="7"/>
+			<depend name="maxLength" param0="15"/>
+		</field>
+		<field name="email" display-name="邮箱" onfail="">
+			<depend name="required"/>
+			<depend name="email"/>
+		</field>
+		<field name="title" display-name="主题" onfail="">
+			<depend name="required"/>
+			<depend name="minLength" param0="2"/>
+			<depend name="maxLength" param0="15"/>
+		</field>
+		<!--<field name="content" display-name="留言内容" onfail="">-->
+			<!--<depend name="required"/>-->
+			<!--<depend name="minLength" param0="8"/>-->
+			<!--<depend name="maxLength" param0="200"/>-->
+		<!--</field>-->
+	</form>
+</validation-config>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.tinygroup:org.tinygroup.ui.ueditor">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tinygroup/org.tinygroup.ui.ueditor/org.tinygroup.ui.ueditor-.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tinygroup/org.tinygroup.ui.ueditor/org.tinygroup.ui.ueditor--javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tinygroup/org.tinygroup.ui.ueditor/org.tinygroup.ui.ueditor--sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
