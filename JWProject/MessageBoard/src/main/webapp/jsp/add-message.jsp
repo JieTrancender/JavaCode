@@ -42,7 +42,7 @@
 
 	<ul>
 		<li><a href="<c:url value="/index.jsp"/> ">Go To Index</a></li>
-		<li><a href="<c:url value="/jsp/get-messages.jsp"/>">Go To Show Msgs</a></li>
+		<li><a href="<c:url value="/AddServlet"/>">Go To Show Msgs</a></li>
 	</ul>
 </body>
 </html>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*CSS Document*/
+
+/*全局控制*/
+body{margin:0; padding:0; font-family:"宋体"; font-size:12px; background:url(../images/top_bg_one.jpg) repeat-x;}
+
+/*重置浏览器默认样式*/
+h1,h2,h3,p,ul,li,div,img,span，textarea{margin:0; padding:0; list-style:none; border:0;}
+
+/*公共样式*/
+a:link, a:visited{color:#666; text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/*header*/
+#header{width:1200px; height:60px; margin:0 auto;}
+
+h1{float:left; height: 60px;/* font-size: 24px;*/}
+.topNav{width:228px;, height: 39px; float:right; padding-top:21px;}
+.topNav p{display:inline-block;}
+.topNav span{padding-left:8px;}
+
+/*#msg-main*/
+#msg-main{width:1200px; margin:0 auto; padding-top:5px; background-color:#e2dfda; padding-bottom:20px;}
+.msg-board{width:1120px; height:125px;margin:20px 40px 0 40px; border:1px dashed gray;}
+.msg-avator{height:125px; width:125px; text-align:center;}
+.msg-right{width:995px; height:125px;}
+.msg-avator,.msg-right{float:left;}
+.right{float:right; line-height: 26px; padding-right:20px;}
+.msg-right h3{display: inline-block; line-height:26px; font-size:20px;}
+.msg-title span{color:gray; padding-left:20px;}
+.msg-content p{text-indent:2em; font-size:18px;}
+
+/*#footer*/
+#footer{width:100%; height:60px; margin:0 auto; text-align:center; background-color:#acbfbf;}
+#footer p{font-size:16px; padding-top:22px;}

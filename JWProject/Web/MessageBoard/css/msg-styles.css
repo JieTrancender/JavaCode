@@ -1,0 +1,37 @@
+/*#main{background-color:red;}*/
+
+/*#msg-main*/
+#msg-main{width:1200px; height:100%; margin:0 auto; padding-top:5px; background-color:#e2dfda; padding-bottom:20px;}
+.msg-board{width:1120px; height:125px;margin:20px 40px 0 40px; border:1px dashed gray;}
+.msg-avator{height:125px; width:125px; text-align:center;}
+.msg-right{width:995px; height:125px;}
+.msg-avator,.msg-right{float:left;}
+.right{float:right; line-height: 26px; padding-right:20px;}
+.msg-right h3{display: inline-block; line-height:26px; font-size:20px;}
+.msg-title span{color:gray; padding-left:20px;}
+.msg-content p{text-indent:2em; font-size:18px;}
+/*.msg-title{width:100%; height:30px;}*/
+/*.msg-right{width:995px;}*/
+
+/*.msg-title{width:995px;}*/
+
+/*.msg-content{width:995px;}*/
+
+/*.msg-title,.msg-avator,.msg-title h3{float:left;}*/
+
+
+/*#main img{height:600; width:960; margin:0 auto; text-align:center;}
+
+.comment{width:1200px; height:160px; margin:0 auto; background:pink; margin-top:40px;}
+
+.avator{height:160px; width:160px; text-align:center;/* background:gold;*/}
+
+/*.avator img{height:125px; width:125px; padding:17.5px;}
+
+.content{width:780px; height:140px; padding:17.5px;}
+
+.content span{font-weight:bold;}
+
+.avator, .content{float:left;}*/
+
+/*940-160 1120 - 250  1120 - 125

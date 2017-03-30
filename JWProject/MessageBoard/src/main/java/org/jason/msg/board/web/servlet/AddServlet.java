@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -44,12 +45,14 @@ public class AddServlet extends HttpServlet {
 
         try {
             List<Message> messageList  =  messageService.getMessages();
+            Collections.reverse(messageList);
             request.setAttribute("msgList", messageList);
 
             for(Message msg : messageList) {
                 System.out.println(msg.toString());
             }
-            request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
+            //request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
