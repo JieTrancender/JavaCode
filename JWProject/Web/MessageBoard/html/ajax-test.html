@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/ajax-test.js"></script>
+	<script>
+		$(function() {
+			$.ajax({
+	type:'post',
+	url:'http://localhost:8080/AddServlet',
+	data:'name=Jason&phone=18681700917&email=jie-email@jie-trancender.org&title=ajax-test&content=i am trying post data by ajax',
+	cache:'false',
+	dataType:'string',
+	success:function(data){
+		alert("Success!")
+	}
+});
+		});
+	</script>
+</head>
+<body>
+	werasdffdsad
+</body>
+</html>

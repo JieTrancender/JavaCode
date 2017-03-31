@@ -10,9 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Course" target="1.5" />
       <module name="CustomerManage" target="1.5" />
-      <module name="JWProject" target="1.5" />
       <module name="MessageBoard" target="1.5" />
       <module name="UserLoginRegister" target="1.5" />
     </bytecodeTargetLevel>

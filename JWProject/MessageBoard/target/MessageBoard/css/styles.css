@@ -14,3 +14,7 @@ h1{float:left; height:60px;}
 .topNav{width:228px; height:39px; float:right; padding-top:21px;}
 .topNav p{display:inline-block;}
 .topNav span{padding-left:8px;}
+
+#footer{width:100%; height:60px; margin:0 auto; text-align:center; background-color:#acbfbf;}
+
+#footer p{font-size:16px; padding-top:22px;}

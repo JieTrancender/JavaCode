@@ -52,7 +52,8 @@ public class AddServlet extends HttpServlet {
                 System.out.println(msg.toString());
             }
             //request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
-            request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
+            //request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/qzon-msg-board.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
