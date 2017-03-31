@@ -47,13 +47,16 @@ public class AddServlet extends HttpServlet {
             List<Message> messageList  =  messageService.getMessages();
             Collections.reverse(messageList);
             request.setAttribute("msgList", messageList);
+            request.setAttribute("msgListSize", messageList.size());
+            request.getSession().setAttribute("msgListSize", messageList.size());
 
             for(Message msg : messageList) {
                 System.out.println(msg.toString());
             }
             //request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
             //request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
-            request.getRequestDispatcher("/jsp/qzon-msg-board.jsp").forward(request, response);
+//            request.getRequestDispatcher("/jsp/qzon-msg-board.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/_msgs.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

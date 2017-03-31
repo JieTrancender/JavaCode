@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--
   Created by IntelliJ IDEA.
   User: JTrancender
@@ -37,11 +38,12 @@
 	<div class="comment_oper">
 		<button type="submit" value="提交">提交</button>
 	</div>
-	<div class="comment_tit">
-		<h4>留言 <span>(139)</span></h4>
-	</div>
+	<%--<div class="comment_tit">--%>
+		<%--<h4>留言 <span>(${sessionScope.msgListSize})</span></h4>--%>
+	<%--</div>--%>
+	<div id="comment_div"></div>
 	<!--留言显示信息-->
-	<ul class="comment_list" id="comment_list">
+	<%--<ul class="comment_list" id="comment_list">
 		<li>
 			<div class="wrap">
 				<div class="wrap_left">
@@ -82,7 +84,7 @@
 	<!--底部返回留言部分-->
 	<div class="other">
 		<p><a href="#c_tx">我要留言</a></p>
-	</div>
+	</div>--%>
 </div>
 <div id="footer"></div>
 

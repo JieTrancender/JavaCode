@@ -1,5 +1,32 @@
-$(function(){
+var loadPage = function(ele, url) {
+    $(ele).load(url);
+};
 
+$(function () {
+    loadPage("#header", "../jsp/header.jsp");
+    loadPage("#footer", "../jsp/footer.jsp");
+});
+
+var getMsgs = function () {
+    $("#comment_div").load("http://localhost:8080/AddServlet");
+};
+
+window.onload=function () {
+    getMsgs();
+}
+
+var submit = function (data) {
+    $.ajax({
+        type:'post',
+        url:'http://localhost:8080/AddServlet',
+        data:data,
+        cache:'false',
+        dataType:'string',
+        async:false,
+    });
+};
+
+$(function(){
     $('.comment_oper button').click(function()
     {
         var name = 'Jason';
@@ -9,60 +36,29 @@ $(function(){
         var content = $('.comment_editor textarea').val();
         var data = 'name=' + name + '&phone=' + phone + '&email=' + email + '&title=' + title + '&content=' + content;
         submit(data);
-        getData();
+        getMsgs();
     })
 });
 
-var submit = function (data) {
-    htmlobj=$.ajax({
-        url:'http://localhost:8080/AddServlet',async:false
-    });
-    // $("#all_wrap").html(htmlobj.responseText);
-    document.body.innerHTML=htmlobj.responseText;
-
-    $.ajax({
-        type:'post',
-        url:'http://localhost:8080/AddServlet',
-        data:data,
-        cache:'false',
-        dataType:'string',
-        async:false,
-        success:function(){
-            alert("Success!")
-        }
-    });
-};
-
-// $(function () {
-//     $.ajax({
-//         type: 'get',
-//         url: 'http://localhost:8080/AddServlet',
-//         cache: 'false',
-//         async:false,
-//         success: function () {
-//             alert("Success!")
-//         }
-//     });
-// });
-
-var getData = function() {
+/*var getData = function() {
     $.ajax({
         type:'get',
-        url:'http://localhost:8080/AddServlet',
-        cache:'false',
-        success:function () {
-            alert("Success!");
+        url:'http://localhost:8080/jsp/AddServlet',
+        dataType:'text',
+        async:true,
+        data:"page=1",
+        // cache:'false',
+        success:function (data) {
+            // alert("Success! getData");
+            alert(data);
+            // $("#comment_div").value=data;
+            document.getElementById("comment_div").innerHTML=data;
         }
     });
-};
+};*/
 
-$(function () {
-    loadPage("#header", "../jsp/header.jsp");
-    loadPage("#footer", "../jsp/footer.jsp");
-});
-
-var loadPage = function(ele, url) {
-    $(ele).load(url);
-};
-
+// $(document).ready(function () {
+//     getmsgs();
+//     alert("ready test");
+// });
 
