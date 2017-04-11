@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="comment_tit">
-<h4>留言 <span>(${sessionScope.msgListSize + 1})</span></h4>
+<h4>留言 <span>(${requestScope.msgListSize})</span></h4>
 </div>
 <ul class="comment_list" id="comment_list">
 	<%--<li>
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	</li>--%>
-	<c:forEach var="i" begin="0" end="${requestScope.msgListSize}" step="1">
+	<c:forEach var="i" begin="0" end="${requestScope.msgListSize - 1}" step="1">
 		<%--${requestScope.msgList[i]}--%>
 	<%--</c:forEach>--%>
 	<%--<c:forEach items="${requestScope.msgList}" var="msg">--%>
@@ -50,11 +50,11 @@
 					<!--头像-->
 					<span class="user_info">${requestScope.msgList[i].name}</span>
 					<!--留言人数-->
-					<span class="txt_floor">第${requestScope.msgListSize - i + 1}楼</span>
+					<span class="txt_floor">第${requestScope.msgListSize - i}楼</span>
 					<!--留言具体内容-->
 					<div class="comment_content">${requestScope.msgList[i].content}</div>
 					<!--留言时间-->
-					<span class="data_time">2017-03-31 7:25</span>
+					<span class="data_time">${requestScope.msgList[i].time}</span>
 				</div>
 			</div>
 		</li>

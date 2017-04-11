@@ -9,16 +9,18 @@ public class Message {
     private String email;
     private String title;
     private String content;
+    private String time;
 
     public Message() {
     }
 
-    public Message(String name, String phone, String email, String title, String content) {
+    public Message(String name, String phone, String email, String title, String content, String time) {
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.title = title;
         this.content = content;
+        this.time = time;
     }
 
     public String getName() {
@@ -61,6 +63,14 @@ public class Message {
         this.content = content;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -69,6 +79,7 @@ public class Message {
                 ", email='" + email + '\'' +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
+                ", time='" + time + '\'' +
                 '}';
     }
 }

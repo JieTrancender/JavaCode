@@ -17,42 +17,30 @@
     <schema id="11" parent="1" name="customers">
       <Visible>1</Visible>
     </schema>
-    <table id="12" parent="2" name="account"/>
-    <table id="13" parent="2" name="tab_bin"/>
-    <table id="14" parent="2" name="test"/>
-    <table id="15" parent="2" name="user"/>
-    <table id="16" parent="11" name="t_customer"/>
-    <column id="17" parent="12" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="18" parent="12" name="name">
-      <Position>2</Position>
-      <DataType>varchar(32)|0</DataType>
-    </column>
-    <column id="19" parent="12" name="balance">
-      <Position>3</Position>
-      <DataType>decimal(10,2)|0</DataType>
-    </column>
-    <key id="20" parent="12" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
+    <schema id="12" parent="1" name="course">
+      <Visible>1</Visible>
+    </schema>
+    <table id="13" parent="2" name="account"/>
+    <table id="14" parent="2" name="tab_bin"/>
+    <table id="15" parent="2" name="test"/>
+    <table id="16" parent="2" name="user"/>
+    <table id="17" parent="11" name="message"/>
+    <table id="18" parent="11" name="t_customer"/>
+    <table id="19" parent="12" name="guestbook"/>
+    <table id="20" parent="12" name="message"/>
     <column id="21" parent="13" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="22" parent="13" name="filename">
+    <column id="22" parent="13" name="name">
       <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>varchar(32)|0</DataType>
     </column>
-    <column id="23" parent="13" name="data">
+    <column id="23" parent="13" name="balance">
       <Position>3</Position>
-      <DataType>mediumblob|0</DataType>
+      <DataType>decimal(10,2)|0</DataType>
     </column>
     <key id="24" parent="13" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -62,68 +50,186 @@
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="14" name="name">
+    <column id="26" parent="14" name="filename">
       <Position>2</Position>
-      <DataType>char(32)|0</DataType>
+      <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="27" parent="14" name="password">
+    <column id="27" parent="14" name="data">
       <Position>3</Position>
-      <DataType>char(32)|0</DataType>
+      <DataType>mediumblob|0</DataType>
     </column>
     <key id="28" parent="14" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="15" name="username">
+    <column id="29" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>char(32)|0</DataType>
+    </column>
+    <column id="31" parent="15" name="password">
+      <Position>3</Position>
+      <DataType>char(32)|0</DataType>
+    </column>
+    <key id="32" parent="15" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="16" name="username">
       <Position>1</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="30" parent="15" name="password">
+    <column id="34" parent="16" name="password">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="31" parent="15" name="age">
+    <column id="35" parent="16" name="age">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="32" parent="15" name="gender">
+    <column id="36" parent="16" name="gender">
       <Position>4</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="33" parent="16" name="id">
+    <column id="37" parent="17" name="name">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="17" name="phone">
+      <Position>2</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <column id="39" parent="17" name="email">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="17" name="title">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="41" parent="17" name="content">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="42" parent="18" name="id">
       <Position>1</Position>
       <DataType>char(32)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="16" name="name">
+    <column id="43" parent="18" name="name">
       <Position>2</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="16" name="gender">
+    <column id="44" parent="18" name="gender">
       <Position>3</Position>
       <DataType>varchar(6)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="16" name="birthday">
+    <column id="45" parent="18" name="birthday">
       <Position>4</Position>
       <DataType>char(10)|0</DataType>
     </column>
-    <column id="37" parent="16" name="cellphone">
+    <column id="46" parent="18" name="cellphone">
       <Position>5</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="16" name="email">
+    <column id="47" parent="18" name="email">
       <Position>6</Position>
       <DataType>varchar(40)|0</DataType>
     </column>
-    <column id="39" parent="16" name="description">
+    <column id="48" parent="18" name="description">
       <Position>7</Position>
       <DataType>varchar(500)|0</DataType>
     </column>
-    <key id="40" parent="16" name="PRIMARY">
+    <key id="49" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="19" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="53" parent="19" name="email">
+      <Position>4</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="54" parent="19" name="title">
+      <Position>5</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="19" name="content">
+      <Position>6</Position>
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="56" parent="19" name="time">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="57" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="20" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <column id="61" parent="20" name="email">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="20" name="title">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="63" parent="20" name="content">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="64" parent="20" name="avator_src">
+      <Position>7</Position>
+      <DataType>varchar(60)|0</DataType>
+      <DefaultExpression>&apos;avator.jpg&apos;</DefaultExpression>
+    </column>
+    <column id="65" parent="20" name="created_at">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="66" parent="20" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

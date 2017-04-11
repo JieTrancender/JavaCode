@@ -15,15 +15,15 @@ import java.util.List;
 public class JdbcMessageDaoImpl implements MessageDao {
     public void add(Message msg) throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "insert into message(name, phone, email, title, content) values(?,?,?,?,?)";
-        Object[] params = {msg.getName(), msg.getPhone(), msg.getEmail(), msg.getTitle(), msg.getContent()};
+        String sql = "insert into guestbook(name, phone, email, title, content, time) values(?,?,?,?,?,?)";
+        Object[] params = {msg.getName(), msg.getPhone(), msg.getEmail(), msg.getTitle(), msg.getContent(), msg.getTime()};
 
         queryRunner.update(sql, params);
     }
 
     public Message findByMessgeName(String msgName) throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "select * from message where name=?";
+        String sql = "select name, phone, email, title, content, time from guestbook where name=?";
         Object[] params = {msgName};
 
         Message msg = queryRunner.query(sql, new BeanHandler<Message>(Message.class), params);
@@ -32,7 +32,7 @@ public class JdbcMessageDaoImpl implements MessageDao {
 
     public List<Message> getMessages() throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "select name, phone, email, title, content from message";
+        String sql = "select name, phone, email, title, content, time from guestbook";
 
         List<Message> messageList = queryRunner.query(sql, new BeanListHandler<Message>(Message.class));
         return messageList;

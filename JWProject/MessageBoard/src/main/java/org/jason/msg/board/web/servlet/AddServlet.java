@@ -48,7 +48,7 @@ public class AddServlet extends HttpServlet {
             Collections.reverse(messageList);
             request.setAttribute("msgList", messageList);
             request.setAttribute("msgListSize", messageList.size());
-            request.getSession().setAttribute("msgListSize", messageList.size());
+            //request.getSession().setAttribute("msgListSize", messageList.size());
 
             for(Message msg : messageList) {
                 System.out.println(msg.toString());
