@@ -50,9 +50,9 @@ public class AddServlet extends HttpServlet {
             request.setAttribute("msgListSize", messageList.size());
             //request.getSession().setAttribute("msgListSize", messageList.size());
 
-            for(Message msg : messageList) {
-                System.out.println(msg.toString());
-            }
+//            for(Message msg : messageList) {
+//                System.out.println(msg.toString());
+//            }
             //request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
             //request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
 //            request.getRequestDispatcher("/jsp/qzon-msg-board.jsp").forward(request, response);

@@ -28,6 +28,9 @@ public class LoginServlet extends HttpServlet {
          */
         User user = CommonUtils.toBean(request.getParameterMap(), User.class);
 
+        System.out.println("test----------------");
+        System.out.println(user.toString());
+
         /**
          * 2. 校验验证码
          *   ①. 从Session域中获取正确的验证码

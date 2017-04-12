@@ -1,6 +1,5 @@
 package org.jason.user.dao;
 
-import org.jason.message.board.dao.MessageDao;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -30,17 +29,6 @@ public class DaoFactory {
         try {
             Class clazz = Class.forName(daoClassName);
             return (UserDao) clazz.newInstance();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static MessageDao getMessageDao() {
-        String daoClassName = properties.getProperty("org.jason.message.board.MessageDao");
-
-        try {
-            Class clazz = Class.forName(daoClassName);
-            return (MessageDao) clazz.newInstance();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
