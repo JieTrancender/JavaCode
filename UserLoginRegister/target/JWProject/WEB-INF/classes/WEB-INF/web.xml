@@ -27,7 +27,7 @@
   </servlet>
   <servlet>
     <servlet-name>AddServlet</servlet-name>
-    <servlet-class>org.jason.message.board.web.servlet.AddServlet</servlet-class>
+    <servlet-class>org.jason.message.board.web.sevlet.AddServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
