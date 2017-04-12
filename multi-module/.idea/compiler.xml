@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="encryption" />
+        <module name="user-login-register" />
+        <module name="web-app" />
+        <module name="web-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="encryption" target="1.5" />
+      <module name="multi-module" target="1.5" />
+      <module name="user-login-register" target="1.5" />
+      <module name="web-app" target="1.5" />
+      <module name="web-service" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
