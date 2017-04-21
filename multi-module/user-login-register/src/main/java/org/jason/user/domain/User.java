@@ -7,14 +7,16 @@ public class User {
     private String name;
     private String gender;
     private String avatar;
+    private UserAuth userAuth;
 
     public User() {
     }
 
-    public User(String name, String gender, String avatar) {
+    public User(String name, String gender, String avatar, UserAuth userAuth) {
         this.name = name;
         this.gender = gender;
         this.avatar = avatar;
+        this.userAuth = userAuth;
     }
 
     public String getName() {
@@ -41,12 +43,21 @@ public class User {
         this.avatar = avatar;
     }
 
+    public UserAuth getUserAuth() {
+        return userAuth;
+    }
+
+    public void setUserAuth(UserAuth userAuth) {
+        this.userAuth = userAuth;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", avatar='" + avatar + '\'' +
+                ", userAuth=" + userAuth +
                 '}';
     }
 }

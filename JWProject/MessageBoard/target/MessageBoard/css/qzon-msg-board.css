@@ -1,0 +1,32 @@
+body,div,ul,li,h3,textarea,h4{ margin:0; padding:0; list-style:none; border:none;}
+a{ text-decoration:none; font-size:12px;}
+body{ font-size:14px;font-family: punctuation,"PingFangSC-Regular","Microsoft Yahei","sans-serif";}
+#all_wrap{ width:940px; margin:0 auto;overflow:hidden;
+    border:1px solid #fbcfe0; background:white; padding:10px 20px; margin-top:20px;}
+.post_panel{width:940px; height:160px;}
+.post_panel h3{ height:30px; font-size:14px; font-weight:400;}
+.comment_editor{ width:680px; height:128px; float:left; border:1px solid #dddddd; border-radius:1px; overflow:hidden;}
+.editor_top{ width:675px; height:30px; background:#f1f1f1; border-bottom:1px solid #dddddd; padding-left:5px;}
+.editor_top span{ display:inline-block; width:24px; height:20px; border:1px solid #bdbdbd; border-radius:2px;
+    text-align:center; vertical-align:middle; background:#f7f7f7; margin-top:4px; cursor:pointer;}
+.editor_top span img{ display:inline-block; padding-top:3px;}
+.editor_body{ width:680px; height:98px;}
+.editor_body textarea{ width:680px; height:98px;}
+.editor_expand{ float:left; height:128px; width:255px; border:1px solid #dddddd;}
+.editor_expand img{ display:block; width:255px; height:126px;}
+.comment_oper{ height:28px; margin-top:5px;}
+.comment_oper button{ width:70px; height:28px; border:1px solid #e471a9; border-radius:1px; background:#f480bf; color:white; text-align:center; cursor:pointer;}
+.comment_list{overflow:hidden;width:100%}
+.comment_tit{ width:100%; height:25px; border-bottom:1px solid #f5c2ce;margin-top:30px;}
+.comment_tit h4{ font-size:13px;}
+.comment_list li{ width:100%; height:190px; border-bottom:1px solid #f5c2ce; display:block;}
+.wrap{ margin:20px 15px 30px 15px;height:160px; width:910px;}
+.wrap_left{width:80px; float:left; height:100px;}
+.wrap_left a{ display:block; width:80px;}
+.wrap_center{ width:750px; height:100%; float:left;}
+.user_info{ color:#ec5ca4; font-size:14px; margin-right:20px;}
+.txt_floor{ color:#9b9b9b; font-size:12px;}
+.comment_content{height:90px; width:100%; padding-top:5px;}
+.data_time{ display:inline-block;height:20px; font-size:12px; color:#9b9b9b; margin-top:20px;}
+.other{ height:20px;}
+.other a{ color:#ec5ca4; font-weight:600;}

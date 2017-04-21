@@ -13,4 +13,14 @@
     <servlet-name>Simple</servlet-name>
     <url-pattern>/Simple</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>org.jason.user.web.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>

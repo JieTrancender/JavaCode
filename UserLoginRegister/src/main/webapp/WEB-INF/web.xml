@@ -1,0 +1,57 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>org.jason.user.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>org.jason.user.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HttpHeaderServlet</servlet-name>
+    <servlet-class>org.jason.course.web.servlet.HttpHeaderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VerifyServlet</servlet-name>
+    <servlet-class>org.jason.user.web.servlet.VerifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ABaseServlet</servlet-name>
+    <servlet-class>org.jason.course.web.servlet.ABaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>org.jason.message.board.web.sevlet.AddServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HttpHeaderServlet</servlet-name>
+    <url-pattern>/HttpHeaderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyServlet</servlet-name>
+    <url-pattern>/VerifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ABaseServlet</servlet-name>
+    <url-pattern>/ABaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

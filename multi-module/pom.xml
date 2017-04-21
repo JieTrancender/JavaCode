@@ -13,6 +13,7 @@
         <module>web-service</module>
         <module>encryption</module>
         <module>user-login-register</module>
+        <module>qiniu</module>
     </modules>
 
 

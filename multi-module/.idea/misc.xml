@@ -39,6 +39,7 @@
     </properties>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/qiniu" />
     <file type="web" url="file://$PROJECT_DIR$/web-app" />
   </component>
   <component name="MavenProjectsManager">

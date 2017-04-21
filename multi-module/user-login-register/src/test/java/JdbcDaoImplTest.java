@@ -13,7 +13,7 @@ public class JdbcDaoImplTest {
     @Test
     public void testUserDaoAdd() {
         UserDao userDao = new JdbcUserDaoImpl();
-        User user = new User("Jason", "男", "default.jpg");
+        User user = new User("Jason", "男", "default.jpg", );
         userDao.add(user);
     }
 

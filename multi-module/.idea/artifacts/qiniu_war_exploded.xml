@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="qiniu:war exploded">
+    <output-path>$PROJECT_DIR$/qiniu/target/qiniu</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="qiniu" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: com.qiniu:qiniu-java-sdk:7.2.6" />
+          <element id="library" level="project" name="Maven: com.qiniu:happy-dns-java:0.1.4" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.6.2" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:3.3.1" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.8.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/qiniu/target/qiniu/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="qiniu/web/Web" />
+    </root>
+  </artifact>
+</component>

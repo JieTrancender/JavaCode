@@ -7,7 +7,7 @@ import org.jason.cstm.service.CustomerService;
 /**
  * Created by JTrancender on 2017/3/16.
  */
-@javax.servlet.annotation.WebServlet(name = "CustomerServlet")
+//@javax.servlet.annotation.WebServlet(name = "CustomerServlet")
 public class CustomerServlet extends BaseServlet {
     private CustomerService customerService = new CustomerService();
 }

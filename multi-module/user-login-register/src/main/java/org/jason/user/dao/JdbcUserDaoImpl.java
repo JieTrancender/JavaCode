@@ -72,4 +72,59 @@ public class JdbcUserDaoImpl implements UserDao {
             HandleException.handleException(conn, pstmt);
         }
     }
+
+    public User find(String identity_type, String identifier) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet resultSet = null;
+
+        try {
+            conn = JdbcUtils.getConnection();
+            String sql = "select name, gender, avatar from users u inner join user_auths a on u.user_id = a.user_id where identity_type = ? and identifier = ?";
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, identity_type);
+            pstmt.setString(2, identifier);
+
+            resultSet = pstmt.executeQuery();
+
+            if (resultSet == null) {
+                return null;
+            }
+            if (resultSet.next()) {
+                User user = new User();
+                user.setName(resultSet.getString("user_name"));
+                user.setGender(resultSet.getString("user_gender"));
+                user.setAvatar(resultSet.getString("user_avatar"));
+//                user.setUserAuth(resultSet.getString(""));
+                return user;
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            HandleException.handleException(conn, pstmt);
+        }
+    }
+
+    public void add(User user) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            JdbcUtils.beginTransaction();
+            conn = JdbcUtils.getConnection();
+            String sql = "insert into users(user_name, user_gender, user_avatar) values(?, ?, ?)";
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, user.getName());
+            pstmt.setString(2, user.getGender());
+            pstmt.setString(3, user.getAvatar());
+
+            pstmt.executeUpdate();
+
+            sql = "insert into user_auths(user)"
+        }
+    }
 }

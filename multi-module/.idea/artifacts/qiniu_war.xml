@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qiniu:war">
+    <output-path>$PROJECT_DIR$/qiniu/target</output-path>
+    <root id="archive" name="qiniu.war">
+      <element id="artifact" artifact-name="qiniu:war exploded" />
+    </root>
+  </artifact>
+</component>
