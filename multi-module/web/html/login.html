@@ -8,8 +8,9 @@
   <meta name="author" content="">
   <link rel="icon" href="#">
 	<title>Home | JTrancender's Blog</title>
-	<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/login.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -57,13 +58,24 @@
 	</nav>
 
 	<div class="container">
-		<div class="jumbotron">
-			<h1>Navbar example</h1>
-		</div>
-	</div>
+
+      <form class="form-signin" role="form" action="/LoginServlet">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" placeholder="Email/Phone/UserName" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
 	
 	
-	<script src="./js/vendor/jquery/jquery.min.js"></script>
-	<script src="./js/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/vendor/jquery/jquery.min.js"></script>
+	<script src="../js/vendor/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
