@@ -2,55 +2,424 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31707bc4-49eb-4d16-b453-7f4ce6f687b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/artifacts/MessageBoard_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/artifacts/MessageBoard_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__commons_dbutils_commons_dbutils_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__jaxen_jaxen_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserLoginRegister/JWProject.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/user-login-register-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/user-login-register-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/web-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/web-service-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/MessageBoard_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/MessageBoard_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/test/java/UserDaoJdbcImplTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/test/java/UserServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/java/org/jason/user/web/servlet/LoginServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/java/org/jason/user/web/servlet/RegisterServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/webapp/jsp/login.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CustomerManage/target/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CustomerManage/target/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/anchor/anchor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/attachment.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/attachment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/attachment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_chm.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_doc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_exe.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_mv.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_psd.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_rar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_txt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/fileTypeImages/icon_xls.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/alignicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/alignicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/file-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/file-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/attachment/images/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/background/background.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/background/background.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/background/background.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/background/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/background/images/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/chart.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/charts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/charts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/charts/images/charts5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/emotion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/emotion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/emotion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/bface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/cface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/fface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/jxface2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/neweditor-tab-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/tface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/wface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/emotion/images/yface.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/gmap/gmap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/help/help.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/help/help.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/help/help.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/image.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/alignicon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/image/images/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/insertframe/insertframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/internal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/link/link.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/map/map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/map/show.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/music/music.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/music/music.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/music/music.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/preview/preview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/addimg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/brush.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/delimg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/delimgH.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/empty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/emptyH.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/eraser.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/redo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/redoH.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/scale.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/scaleH.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/size.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/undo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/images/undoH.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/scrawl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/scrawl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/scrawl/scrawl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/searchreplace/searchreplace.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/searchreplace/searchreplace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/snapscreen/snapscreen.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/spechars/spechars.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/spechars/spechars.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/dragicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/edittable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/edittable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/edittable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/edittd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/table/edittip.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/pre0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/pre1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/pre2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/pre3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/images/pre4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/template.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/template/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/center_focus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/file-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/file-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/left_focus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/none_focus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/right_focus.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/images/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/video.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/video.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/video/video.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/webapp/webapp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/wordimage/fClipboard_ueditor.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/wordimage/imageUploader.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/wordimage/tangram.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/wordimage/wordimage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/dialogs/wordimage/wordimage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/controller.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/lib/commons-codec-1.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/lib/commons-fileupload-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/lib/commons-io-2.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/lib/json.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/jsp/lib/ueditor-1.1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/addimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/alldeletebtnhoverskin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/alldeletebtnupskin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/deletedisable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/deleteenable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/listbackground.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/localimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/music.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/rotateleftdisable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/rotateleftenable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/rotaterightdisable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/rotaterightenable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/en/images/upload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/zh-cn/images/copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/zh-cn/images/localimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/zh-cn/images/music.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/zh-cn/images/upload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/lang/zh-cn/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/css/ueditor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/css/ueditor.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/dialogbase.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/arrow_down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/arrow_up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/button-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/cancelbutton.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/charts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/cursor_h.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/cursor_h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/cursor_v.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/cursor_v.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/dialog-title-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/filescan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/highlighted.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/icons-all.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/loaderror.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/lock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/neweditor-tab-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/pagebreak.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/scale.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/sortable.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/spacer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/sparator_v.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/table-cell-align.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/tangram-colorpicker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/toolbar_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/unhighlighted.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/upload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/videologo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/word.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/default/images/wordpaste.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/themes/iframe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/SyntaxHighlighter/shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/SyntaxHighlighter/shCoreDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/codemirror/codemirror.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/codemirror/codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/mootools-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/mootools-adapter.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/prototype-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/prototype-adapter.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/standalone-framework.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/adapters/standalone-framework.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/highcharts-more.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/highcharts-more.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/highcharts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/highcharts.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/annotations.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/annotations.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/canvas-tools.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/canvas-tools.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/data.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/drilldown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/drilldown.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/exporting.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/exporting.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/funnel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/funnel.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/heatmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/heatmap.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/map.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/no-data-to-display.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/modules/no-data-to-display.src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/themes/dark-blue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/themes/dark-green.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/themes/gray.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/themes/grid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/highcharts/themes/skies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/jquery-1.10.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/jquery-1.10.2.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/snapscreen/UEditorSnapscreen.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/font/vjs.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/font/vjs.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/font/vjs.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/font/vjs.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/video-js.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/video-js.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/video-js.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/video.dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/video-js/video.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/Uploader.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.flashonly.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.flashonly.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.html5only.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.html5only.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.withoutimage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/webuploader/webuploader.withoutimage.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/xss.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/zeroclipboard/ZeroClipboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/zeroclipboard/ZeroClipboard.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/third-party/zeroclipboard/ZeroClipboard.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/ueditor.all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/ueditor.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/ueditor.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/ueditor.parse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/UEditor/ueditor.parse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/CustomerManage-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/MessageBoard-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/c3p0-0.9.5.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-dbcp2-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-dbutils-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-io-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/commons-pool2-2.4.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/javax.servlet.jsp-api-2.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/jaxen-1.1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/junit-4.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/mchange-commons-java-0.2.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/css/msg-styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/css/qzon-msg-board.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/avator.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/editor_expand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/people_photo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/smile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/top_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/top_bg_one.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/images/warm-sun.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/message-board.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/qzon-msg-board.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/vendor/validation/validation-config.dtd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/vendor/validation/validation-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/js/vendor/validation/validation-framework.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/_msgs.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/add-message.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/ajax-test.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/footer.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/get-messages.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/header.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/qzon-msg-board.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/MessageBoard/jsp/show-msgs.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MessageBoard/target/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UserLoginRegister/target/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UserLoginRegister/target/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UserLoginRegister/target/classes/dbconfig.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UserLoginRegister/target/classes/users.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/encryption/target/classes/org/jason/MD5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/encryption/target/test-classes/MD5Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/classes/org/jason/qiniu/web/servlet/UploadCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/classes/org/jason/qiniu/web/servlet/UploadCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/gson-2.6.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/happy-dns-java-0.1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/junit-4.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/okhttp-3.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/okio-1.8.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/lib/qiniu-java-sdk-7.2.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/qiniu/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/qiniu/target/test-classes/org/jason/qiniu/QiniuTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/c3p0-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/dao.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/commons/CommonUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/commons/JdbcUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/commons/TxQueryRunner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/commons/VerifyCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/DaoFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/HandleException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/JdbcUserAuthDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/JdbcUserDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/UserAuthDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/domain/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/domain/UserAuth.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/service/UserAuthService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/classes/org/jason/user/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/test-classes/JdbcDaoImplTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/target/test-classes/TxQueryRunnerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/classes/org/jason/user/web/servlet/UserServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/classes/org/jason/web/servlet/SimpleServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/classes/org/jason/user/web/servlet/UserServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/classes/org/jason/web/servlet/SimpleServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/c3p0-0.9.5.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/commons-beanutils-1.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/commons-dbutils-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/mchange-commons-java-0.2.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/user-login-register-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/lib/web-service-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/js/verify_code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/jsp/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../multi-module/web-service/target/classes/org/jason/SimpleService.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomerManage/CustomerManage.iml" afterPath="$PROJECT_DIR$/CustomerManage/CustomerManage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomerManage/pom.xml" afterPath="$PROJECT_DIR$/CustomerManage/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomerManage/src/main/java/org/jason/cstm/web/servlet/CustomerServlet.java" afterPath="$PROJECT_DIR$/CustomerManage/src/main/java/org/jason/cstm/web/servlet/CustomerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MessageBoard/MessageBoard.iml" afterPath="$PROJECT_DIR$/MessageBoard/MessageBoard.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MessageBoard/pom.xml" afterPath="$PROJECT_DIR$/MessageBoard/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserLoginRegister/UserLoginRegister.iml" afterPath="$PROJECT_DIR$/UserLoginRegister/UserLoginRegister.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserLoginRegister/pom.xml" afterPath="$PROJECT_DIR$/UserLoginRegister/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../UserLoginRegister/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../UserLoginRegister/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../multi-module/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/.idea/misc.xml" afterPath="$PROJECT_DIR$/../multi-module/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/.idea/modules.xml" afterPath="$PROJECT_DIR$/../multi-module/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserLoginRegister/JWProject.iml" afterPath="$PROJECT_DIR$/UserLoginRegister/JWProject.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../multi-module/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/pom.xml" afterPath="$PROJECT_DIR$/../multi-module/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/qiniu/qiniu.iml" afterPath="$PROJECT_DIR$/../multi-module/qiniu/qiniu.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/commons/CommonUtils.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/commons/CommonUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/JdbcUserAuthDaoImpl.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/JdbcUserAuthDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/JdbcUserDaoImpl.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/JdbcUserDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/UserDao.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/dao/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/domain/User.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/domain/UserAuth.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/domain/UserAuth.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/service/UserService.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/java/org/jason/user/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/users.sql" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/main/users.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/user-login-register/src/test/java/JdbcDaoImplTest.java" afterPath="$PROJECT_DIR$/../multi-module/user-login-register/src/test/java/JdbcDaoImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/src/main/java/org/jason/web/servlet/SimpleServlet.java" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/java/org/jason/web/servlet/SimpleServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../multi-module/web-app/target/web-app/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../multi-module/web-app/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../multi-module/web-app/web-app.iml" afterPath="$PROJECT_DIR$/../multi-module/web-app/web-app.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../UserLoginRegister/target/" />
@@ -121,21 +490,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course.guestbook" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/c9976ce7/4286296e-c492-4bde-b175-90f6e7f9346c/course.guestbook">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MessageBoard/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -146,17 +500,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserLoginRegister/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1975">
-              <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MessageBoard/src/main/java/org/jason/msg/board/web/servlet/AddServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
@@ -166,26 +510,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ABaseServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/course/web/servlet/ABaseServlet.java">
+      <file leaf-file-name="JdbcUserDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/dao/JdbcUserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="250">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="method#add#0;class#JdbcUserDaoImpl#0" expanded="false" />
+                <element signature="method#findByUserName#0;class#JdbcUserDaoImpl#0" expanded="false" />
+                <marker date="1489567695593" expanded="true" signature="666:698" ph="insert into user... " />
+                <marker date="1489567695593" expanded="true" signature="1601:1636" ph="select * fro... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CustomerManage/src/main/java/org/jason/cstm/web/servlet/CustomerServlet.java">
+      <file leaf-file-name="UserException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/service/UserException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            <state relative-caret-position="125">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/RegisterServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1432#1448#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/user/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -299,11 +696,56 @@
   </component>
   <component name="MavenProjectNavigator">
     <option name="showVersions" value="true" />
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="MessageBoard Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="MessageBoard Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JWProject Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="CustomerManage Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="316" />
-    <option name="y" value="62" />
+    <option name="x" value="214" />
+    <option name="y" value="56" />
     <option name="width" value="1556" />
     <option name="height" value="1002" />
   </component>
@@ -351,115 +793,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MessageBoard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MessageBoard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MessageBoard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jason" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MessageBoard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jason" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JWProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MessageBoard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jason" />
+              <option name="myItemId" value="CustomerManage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,7 +826,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/UserLoginRegister" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="MySQL" />
   </component>
@@ -1180,7 +1514,9 @@
       <workItem from="1492485307593" duration="19000" />
       <workItem from="1492486260696" duration="14000" />
       <workItem from="1492743310194" duration="609000" />
-      <workItem from="1492746427902" duration="592000" />
+      <workItem from="1492746427902" duration="602000" />
+      <workItem from="1493007480289" duration="28000" />
+      <workItem from="1493011203338" duration="6933000" />
     </task>
     <servers />
   </component>
@@ -1217,7 +1553,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188077000" />
+    <option name="totallyTimeSpent" value="195048000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1229,18 +1565,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="316" y="62" width="1556" height="1002" extended-state="1" />
+    <frame x="214" y="56" width="1556" height="1002" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40665874" sideWeight="0.5078652" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20320855" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20320855" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24864446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1253,7 +1589,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29262674" sideWeight="0.49213484" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917705" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26002672" sideWeight="0.47413793" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26671124" sideWeight="0.47413793" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19984508" sideWeight="0.5250432" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20792079" sideWeight="0.51111114" order="7" side_tool="true" content_ui="tabs" />
@@ -1378,7 +1714,7 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1387,46 +1723,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MessageBoard/src/main/webapp/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/user/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1572,13 +1872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/dao/JdbcUserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/commons/VerifyCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1593,13 +1886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/js/login-register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1611,13 +1897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1646,7 +1925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1764,6 +2042,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/dao/JdbcUserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="method#add#0;class#JdbcUserDaoImpl#0" expanded="false" />
+            <element signature="method#findByUserName#0;class#JdbcUserDaoImpl#0" expanded="false" />
+            <marker date="1489567695593" expanded="true" signature="666:698" ph="insert into user... " />
+            <marker date="1489567695593" expanded="true" signature="1601:1636" ph="select * fro... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/service/UserException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c9976ce7/4286296e-c492-4bde-b175-90f6e7f9346c/course.guestbook">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#1432#1448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/java/org/jason/user/web/servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserLoginRegister/src/main/webapp/user/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1823,6 +2177,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

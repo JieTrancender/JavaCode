@@ -8,6 +8,6 @@ import org.jason.user.domain.User;
  */
 public interface UserDao {
     public void add(User user);
-    public User findByUserUserId(int userId);
+//    public User findByUserUserId(int userId);
     public User find(String identity_type, String identifier);
 }

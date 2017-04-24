@@ -1,7 +1,9 @@
 package org.jason.commons;
 
 import org.apache.commons.beanutils.BeanUtils;
+import sun.misc.BASE64Encoder;
 
+import java.security.MessageDigest;
 import java.util.Map;
 import java.util.UUID;
 
@@ -23,5 +25,19 @@ public class CommonUtils {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String encoderByMd5(String str) {
+        try {
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            BASE64Encoder base64Encoder = new BASE64Encoder();
+            return base64Encoder.encode(md5.digest(str.getBytes("utf-8")));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean checkPassword(String firstKey, String lastKey) {
+        return encoderByMd5(firstKey).equals(lastKey);
     }
 }

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="course@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="course">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="customers"/>
+    <schema id="4" parent="1" name="firstblog_development"/>
+    <schema id="5" parent="1" name="firstblog_test"/>
+    <schema id="6" parent="1" name="hello_app_development"/>
+    <schema id="7" parent="1" name="hello_app_test"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="javadb"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="photo-sharing_development"/>
+    <schema id="13" parent="1" name="photo-sharing_test"/>
+    <schema id="14" parent="1" name="sakila"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="world"/>
+    <table id="17" parent="2" name="guestbook"/>
+    <table id="18" parent="2" name="message"/>
+    <table id="19" parent="2" name="test"/>
+    <table id="20" parent="2" name="user_auths"/>
+    <table id="21" parent="2" name="users"/>
+    <column id="22" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="17" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="25" parent="17" name="email">
+      <Position>4</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="26" parent="17" name="title">
+      <Position>5</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="17" name="content">
+      <Position>6</Position>
+      <DataType>varchar(2000)|0</DataType>
+    </column>
+    <column id="28" parent="17" name="time">
+      <Position>7</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <key id="29" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="18" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <column id="33" parent="18" name="email">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="18" name="title">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="35" parent="18" name="content">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="36" parent="18" name="avator_src">
+      <Position>7</Position>
+      <DataType>varchar(60)|0</DataType>
+      <DefaultExpression>&apos;avator.jpg&apos;</DefaultExpression>
+    </column>
+    <column id="37" parent="18" name="created_at">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="38" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="19" name="time">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <key id="42" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="20" name="user_id">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="20" name="identity_type">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="20" name="identifier">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="20" name="credential_digest">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="48" parent="20" name="uk_user_auths">
+      <ColNames>identity_type
+identifier</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="20" name="index_name">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="50" parent="20" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="51" parent="20" name="uk_user_auths">
+      <ColNames>identity_type
+identifier</ColNames>
+      <UnderlyingIndexName>uk_user_auths</UnderlyingIndexName>
+    </key>
+    <foreign-key id="52" parent="20" name="fk_user_id_user_auths">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>course</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="53" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="21" name="user_id">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="21" name="user_name">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="21" name="user_gender">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <column id="57" parent="21" name="user_avatar">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <index id="58" parent="21" name="index_name">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="59" parent="21" name="PRIMARY">
+      <ColNames>id
+user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

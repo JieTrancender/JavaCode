@@ -13,22 +13,22 @@ public class JdbcDaoImplTest {
     @Test
     public void testUserDaoAdd() {
         UserDao userDao = new JdbcUserDaoImpl();
-        User user = new User("Jason", "男", "default.jpg", );
-        userDao.add(user);
+        //User user = new User("Jason", "男", "default.jpg" );
+        //userDao.add(user);
     }
 
     @Test
     public void testUserDaoFind() {
         int user_id = 1;
         UserDao userDao = new JdbcUserDaoImpl();
-        User user = userDao.findByUserUserId(user_id);
-        System.out.println(user.toString());
+//        User user = userDao.findByUserUserId(user_id);
+//        System.out.println(user.toString());
     }
 
     @Test
     public void testUserAuthDaoAdd() {
         UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
-        UserAuth userAuth = new UserAuth(1, "userName", "MingEr", "123456");
+        UserAuth userAuth = new UserAuth("1", "userName", "MingEr", "123456");
         userAuthDao.add(userAuth);
     }
 
@@ -38,7 +38,7 @@ public class JdbcDaoImplTest {
         UserAuth userAuth = userAuthDao.findByTypeAndIdentifier("userName", "MingEr");
         System.out.println(userAuth);
 
-        User user = new JdbcUserDaoImpl().findByUserUserId(userAuth.getUserId());
-        System.out.println(user);
+//        User user = new JdbcUserDaoImpl().findByUserUserId(userAuth.getUserId());
+//        System.out.println(user);
     }
 }

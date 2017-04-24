@@ -20,10 +20,10 @@ public class JdbcUserAuthDaoImpl implements UserAuthDao {
             String sql = "insert into user_auths(user_id, identity_type, identifier, credential) values(?, ?, ?, ?)";
             pstmt = conn.prepareStatement(sql);
 
-            pstmt.setInt(1, userAuth.getUserId());
+            pstmt.setString(1, userAuth.getUserId());
             pstmt.setString(2, userAuth.getIdentityType());
             pstmt.setString(3, userAuth.getIdentifier());
-            pstmt.setString(4, userAuth.getCredential());
+            pstmt.setString(4, userAuth.getCredentialDigest());
 
             pstmt.executeUpdate();
         } catch (Exception e) {
@@ -52,7 +52,7 @@ public class JdbcUserAuthDaoImpl implements UserAuthDao {
             }
             if (resultSet.next()) {
                 UserAuth userAuth = new UserAuth();
-                userAuth.setUserId(resultSet.getInt("user_id"));
+                userAuth.setUserId(resultSet.getString("user_id"));
                 userAuth.setIdentityType(resultSet.getString("identity_type"));
                 userAuth.setIdentifier(resultSet.getString("identifier"));
                 userAuth.setCredential(resultSet.getString("credential"));
