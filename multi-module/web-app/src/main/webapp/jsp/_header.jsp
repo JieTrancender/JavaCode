@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: JTrancender
@@ -50,8 +51,26 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Default</a></li>
-				<li><a href="#">Static top</a></li>
-				<li><a href="#">Fiexed top</a></li>
+				<li>
+					<c:choose>
+						<c:when test="${sessionScope.current.name != null}">
+							<a href="#">${sessionScope.current.name}</a>
+						</c:when>
+						<c:otherwise>
+							<a href="<c:url value="/jsp/login.jsp"/>">登录</a>
+						</c:otherwise>
+					</c:choose>
+				</li>
+				<li>
+					<c:choose>
+						<c:when test="${sessionScope.current.name != null}">
+							<a href="<c:url value="/LoginServlet"/> ">注销</a>
+						</c:when>
+						<c:otherwise>
+							<a href="<c:url value="/jsp/register.jsp"/>">注册</a>
+						</c:otherwise>
+					</c:choose>
+				</li>
 			</ul>
 		</div>
 	</div>

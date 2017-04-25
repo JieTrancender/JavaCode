@@ -28,12 +28,26 @@
 </head>
 <body>
 	<%@ include file="_header.jsp"%>
-	<div class="well">
-		Login
-	</div>
+	<c:if test="${requestScope.alertMsg != null}">
+		<div class="container">
+			<div class="alert alert-warning">${requestScope.alertMsg}</div>
+		</div>
+	</c:if>
+
+	<div class="container">
+		<form class="form-signin" role="form" action="<c:url value="/LoginServlet"/>" method="post">
+			<h2 class="form-signin-heading">Please sign in</h2>
+			<input name="identifier" type="text" class="form-control" value="${requestScope.formInfo.identifier}" placeholder="Email/Phone/UserName" required autofocus>
+			<input name="credentialDigest" type="password" class="form-control" placeholder="Password" required>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		</form>
+	</div> <!-- /container -->
 	<%@ include file="_footer.jsp"%>
-
-
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>

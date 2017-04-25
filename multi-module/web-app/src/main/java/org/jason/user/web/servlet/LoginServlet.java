@@ -26,6 +26,13 @@ public class LoginServlet extends HttpServlet {
         UserAuth form = CommonUtils.toBean(request.getParameterMap(), UserAuth.class);
         form.setIdentityType(identity_type);
 
+        String identityType = request.getParameter("identityType");
+        String credentialDigest = request.getParameter("credentialDigest");
+
+        System.out.println(identity_type + ":" + credentialDigest);
+
+        System.out.println(form.toString());
+
         //暂时未实现
         //String remember_me = request.getParameter("remember_me");
         //String verifyCode = request.getParameter("verifyCode");
@@ -34,19 +41,21 @@ public class LoginServlet extends HttpServlet {
             User user = userService.find(form);
 
             HttpSession session = request.getSession();
-            session.setAttribute("sessionUser", user);
+            session.setAttribute("current", user);
 
             response.sendRedirect("/index.jsp");
         } catch (UserException ue) {
             request.setAttribute("formInfo", form);
+            request.setAttribute("alertMsg", "登录失败，请重新登录！");
             request.getRequestDispatcher("/jsp/login.jsp").forward(request, response);
-            return;
         }
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("LoginServlet#doGet");
-        doPost(request, response);
+        HttpSession session = request.getSession();
+        session.setAttribute("current", null);
+        response.sendRedirect("/index.jsp");
     }
 }

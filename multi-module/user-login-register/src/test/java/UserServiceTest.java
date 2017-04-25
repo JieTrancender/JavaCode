@@ -11,8 +11,8 @@ import org.junit.Test;
 public class UserServiceTest {
     @Test
     public void testRegister() {
-        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "email", "582865471@qq.com", "JTrancender...");
-        User user = new User("JTrancender", "男", "images/avatar/default.jpg", userAuth);
+        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "phone", "18681700917", "JTrancender...");
+        User user = new User("JieTrancender", "男", "images/avatar/default.jpg", userAuth);
         UserService userService = new UserService();
         try {
             userService.register(user);
@@ -32,6 +32,7 @@ public class UserServiceTest {
         UserService userService = new UserService();
         try {
             userService.login(userAuth);
+            System.out.println(userAuth.getIdentityType() + ":" + userAuth.getIdentifier() + "登录成功！");
         } catch (UserException e) {
             e.printStackTrace();
         }
