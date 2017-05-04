@@ -26,10 +26,11 @@ public class LoginServlet extends HttpServlet {
         UserAuth form = CommonUtils.toBean(request.getParameterMap(), UserAuth.class);
         form.setIdentityType(identity_type);
 
-        String identityType = request.getParameter("identityType");
-        String credentialDigest = request.getParameter("credentialDigest");
+//        String identityType = request.getParameter("identityType");
+        String credential = request.getParameter("password");
+        form.setCredentialDigest(credential);
 
-        System.out.println(identity_type + ":" + credentialDigest);
+        System.out.println(credential + "->" + form.getCredentialDigest());
 
         System.out.println(form.toString());
 
@@ -43,6 +44,15 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("current", user);
 
+
+            Cookie cookieIdentifier = new Cookie("identifier", form.getIdentifier());
+            cookieIdentifier.setMaxAge(60 * 60 * 24 * 30);
+            cookieIdentifier.setPath("/");
+            response.addCookie(cookieIdentifier);
+            Cookie cookiePassword = new Cookie("password", credential);
+            cookiePassword.setMaxAge(60 * 60 * 24 * 30);
+            cookiePassword.setPath("/");
+            response.addCookie(cookiePassword);
             response.sendRedirect("/index.jsp");
         } catch (UserException ue) {
             request.setAttribute("formInfo", form);

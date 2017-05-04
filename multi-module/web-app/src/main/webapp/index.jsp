@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="#">
-	<title>Login | JTrancender's Blog</title>
+	<title>Index | JTrancender's Blog</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="stylesheet" href="./css/login.css">
@@ -16,7 +16,8 @@
 </head>
 <body>
 	<%@ include file="/jsp/_header.jsp"%>
-<h2>Hello World!</h2>
+	<h1>Hi, ${sessionScope.current.name} welcome to here.</h1>
+<%--<h2>Hello World!</h2>--%>
 <p><c:out value="${cookie['Compiler'].value}"/></p>
 	<%@ include file="/jsp/_footer.jsp"%>
 
