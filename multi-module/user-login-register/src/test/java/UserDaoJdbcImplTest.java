@@ -17,8 +17,9 @@ public class UserDaoJdbcImplTest {
         String identity_type = "email";
         String identifier = "ming-email@jie-trancender.org";
         String credential = "ShaoJie@qq.com";
+        String remember_me_digest = CommonUtils.uuid();
         String uuid = CommonUtils.uuid();
-        User user = new User(user_name, user_gender, user_avatar, new UserAuth(uuid, identity_type, identifier, credential));
+        User user = new User(user_name, user_gender, user_avatar, new UserAuth(uuid, identity_type, identifier, credential, CommonUtils.encoderByMd5(remember_me_digest)));
 
         UserDao userDao = new JdbcUserDaoImpl();
         userDao.add(user);

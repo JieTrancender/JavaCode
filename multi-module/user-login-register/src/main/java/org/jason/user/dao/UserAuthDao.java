@@ -8,4 +8,6 @@ import org.jason.user.domain.UserAuth;
 public interface UserAuthDao {
     public void add(UserAuth userAuth);
     public UserAuth findByTypeAndIdentifier(String identity_type, String identifier);
+    public void rememberLogin(UserAuth userAuth);
+    public void forgetLogin(UserAuth userAuth);
 }

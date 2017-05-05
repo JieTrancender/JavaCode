@@ -147,57 +147,61 @@
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="48" parent="20" name="uk_user_auths">
+    <column id="48" parent="20" name="remember_me_digest">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <index id="49" parent="20" name="uk_user_auths">
       <ColNames>identity_type
 identifier</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="20" name="index_name">
+    <index id="50" parent="20" name="index_name">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="50" parent="20" name="PRIMARY">
+    <key id="51" parent="20" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="51" parent="20" name="uk_user_auths">
+    <key id="52" parent="20" name="uk_user_auths">
       <ColNames>identity_type
 identifier</ColNames>
       <UnderlyingIndexName>uk_user_auths</UnderlyingIndexName>
     </key>
-    <foreign-key id="52" parent="20" name="fk_user_id_user_auths">
+    <foreign-key id="53" parent="20" name="fk_user_id_user_auths">
       <ColNames>user_id</ColNames>
       <RefSchemaName>course</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="53" parent="21" name="id">
+    <column id="54" parent="21" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="54" parent="21" name="user_id">
+    <column id="55" parent="21" name="user_id">
       <Position>2</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="21" name="user_name">
+    <column id="56" parent="21" name="user_name">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="21" name="user_gender">
+    <column id="57" parent="21" name="user_gender">
       <Position>4</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <column id="57" parent="21" name="user_avatar">
+    <column id="58" parent="21" name="user_avatar">
       <Position>5</Position>
       <DataType>varchar(32)|0</DataType>
     </column>
-    <index id="58" parent="21" name="index_name">
+    <index id="59" parent="21" name="index_name">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="59" parent="21" name="PRIMARY">
+    <key id="60" parent="21" name="PRIMARY">
       <ColNames>id
 user_id</ColNames>
       <Primary>1</Primary>

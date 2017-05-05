@@ -9,25 +9,27 @@ import org.junit.Test;
  * Created by JTrancender on 2017/4/24.
  */
 public class UserServiceTest {
-    @Test
-    public void testRegister() {
-        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "phone", "18681700917", "JTrancender...");
+//    @Test
+    public User testRegister() {
+        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "phone", "18681700911", "JTrancender...", CommonUtils.encoderByMd5(CommonUtils.uuid()));
         User user = new User("JieTrancender", "男", "images/avatar/default.jpg", userAuth);
         UserService userService = new UserService();
         try {
             userService.register(user);
             System.out.println(user.getIdentityType() + ":" + user.getIdentifier() + " 注册成功！");
+            return user;
         } catch (UserException ue) {
             System.err.println(ue.getMessage());
         }
+        return user;
     }
 
     @Test
     public void testLogin() {
         UserAuth userAuth = new UserAuth();
-        userAuth.setIdentityType("email");
-        userAuth.setIdentifier("ming-email@jie-trancender.org");
-        userAuth.setCredentialDigest("ShaoJie@qq.com");
+        userAuth.setIdentityType("phone");
+        userAuth.setIdentifier("18681700916");
+        userAuth.setCredentialDigest("JTrancender...");
 
         UserService userService = new UserService();
         try {
@@ -36,5 +38,37 @@ public class UserServiceTest {
         } catch (UserException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testRemember() {
+        UserService userService = new UserService();
+        User user = testRegister();
+        String identityType = user.getUserAuth().getIdentityType();
+        String identifier = user.getUserAuth().getIdentifier();
+        String credentialDigest = user.getUserAuth().getCredentialDigest();
+        System.out.println(user.toString());
+        System.out.println(user.getUserAuth().toString());
+
+        userService.rememberLogin(user.getUserAuth());
+
+        UserAuth userAuth = new UserAuth();
+        userAuth.setIdentityType(identityType);
+        userAuth.setIdentifier(identifier);
+        System.out.println(userAuth.toString());
+        User user1 = userService.find(userAuth);
+        System.out.println(user1.getUserAuth().toString());
+    }
+    @Test
+    public void testForget() {
+        UserService userService = new UserService();
+        User user = testRegister();
+        System.out.println(user.getUserAuth().toString());
+        userService.forgetLogin(user.getUserAuth());
+        User user1 = userService.find(user.getUserAuth());
+        System.out.println(user1.getUserAuth().toString());
+        userService.rememberLogin(user1.getUserAuth());
+        user1 = userService.find(user1.getUserAuth());
+        System.out.println(user1.getUserAuth().toString());
     }
 }

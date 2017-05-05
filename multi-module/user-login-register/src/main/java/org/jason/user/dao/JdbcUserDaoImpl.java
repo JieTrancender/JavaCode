@@ -25,8 +25,8 @@ public class JdbcUserDaoImpl implements UserDao {
 
         try {
             conn = JdbcUtils.getConnection();
-            String sql = "select u.user_id, user_name, user_gender, user_avatar, identity_type, identifier, credential_digest from" +
-                    " users u inner join user_auths a on u.user_id = a.user_id where identity_type = ? and identifier = ?";
+            String sql = "select u.user_id, user_name, user_gender, user_avatar, identity_type, identifier, credential_digest, remember_me_digest " + 
+                    "from users u inner join user_auths a on u.user_id = a.user_id where identity_type = ? and identifier = ?";
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, identity_type);
@@ -47,6 +47,7 @@ public class JdbcUserDaoImpl implements UserDao {
                 userAuth.setIdentityType(resultSet.getString("identity_type"));
                 userAuth.setIdentifier(resultSet.getString("identifier"));
                 userAuth.setCredential(resultSet.getString("credential_digest"));
+                userAuth.setRememberMeDigest(resultSet.getString("remember_me_digest"));
                 user.setUserAuth(userAuth);
                 return user;
             } else {
@@ -76,13 +77,14 @@ public class JdbcUserDaoImpl implements UserDao {
 
             pstmt.executeUpdate();
 
-            sql = "insert into user_auths(user_id, identity_type, identifier, credential_digest) values(?, ?, ?, ?)";
+            sql = "insert into user_auths(user_id, identity_type, identifier, credential_digest, remember_me_digest) values(?, ?, ?, ?, ?)";
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, user.getUserAuth().getUserId());
             pstmt.setString(2, user.getUserAuth().getIdentityType());
             pstmt.setString(3, user.getUserAuth().getIdentifier());
-            pstmt.setString(4, user.getCredentialDigest());
+            pstmt.setString(4, user.getUserAuth().getCredentialDigest());
+            pstmt.setString(5, user.getUserAuth().getRememberMeDigest());
 
             pstmt.executeUpdate();
             JdbcUtils.commitTransaction();

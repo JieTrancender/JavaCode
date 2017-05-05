@@ -33,7 +33,7 @@ public class SimpleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cookie cookie = new Cookie("Compiler", "Idea");
+        Cookie cookie = new Cookie("Compiler", "Idea.v2016.3.4");
         cookie.setMaxAge(60 * 60 * 24 * 30);
         cookie.setPath("/");
         resp.addCookie(cookie);

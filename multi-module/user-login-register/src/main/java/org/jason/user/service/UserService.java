@@ -1,6 +1,8 @@
 package org.jason.user.service;
 
+import org.jason.user.dao.JdbcUserAuthDaoImpl;
 import org.jason.user.dao.JdbcUserDaoImpl;
+import org.jason.user.dao.UserAuthDao;
 import org.jason.user.dao.UserDao;
 import org.jason.user.domain.User;
 import org.jason.user.domain.UserAuth;
@@ -10,6 +12,7 @@ import org.jason.user.domain.UserAuth;
  */
 public class UserService {
     private UserDao userDao = new JdbcUserDaoImpl();
+    private UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
 
     public void register(User user) throws UserException {
         User _user = userDao.find(user.getUserAuth().getIdentityType(), user.getUserAuth().getIdentifier());
@@ -28,6 +31,14 @@ public class UserService {
         if (!_user.getUserAuth().getCredentialDigest().equals(user.getCredentialDigest())) {
             throw new UserException(user.getIdentityType() + "或者密码输入错误！");
         }
+    }
+
+    public void rememberLogin(UserAuth userAuth) {
+        userAuthDao.rememberLogin(userAuth);
+    }
+
+    public void forgetLogin(UserAuth userAuth) {
+        userAuthDao.forgetLogin(userAuth);
     }
 
     public User find(UserAuth userAuth) {

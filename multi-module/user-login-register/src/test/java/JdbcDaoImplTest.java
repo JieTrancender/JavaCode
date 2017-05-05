@@ -1,3 +1,4 @@
+import org.jason.commons.CommonUtils;
 import org.jason.user.dao.JdbcUserAuthDaoImpl;
 import org.jason.user.dao.JdbcUserDaoImpl;
 import org.jason.user.dao.UserAuthDao;
@@ -28,7 +29,8 @@ public class JdbcDaoImplTest {
     @Test
     public void testUserAuthDaoAdd() {
         UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
-        UserAuth userAuth = new UserAuth("1", "userName", "MingEr", "123456");
+        String remember_me_digest = CommonUtils.encoderByMd5(CommonUtils.uuid());
+        UserAuth userAuth = new UserAuth("1", "userName", "MingEr", "123456", remember_me_digest);
         userAuthDao.add(userAuth);
     }
 

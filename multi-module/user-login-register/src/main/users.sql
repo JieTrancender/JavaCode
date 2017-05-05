@@ -28,3 +28,7 @@ alter table user_auths add constraint fk_user_id_user_auths foreign key(user_id)
 
 alter table user_auths change credential credential_digest varchar(200) not null;
 
+alter table user_auths add column remember_me_digest varchar(200) null;
+
+update user_auths set remember_me_digest = 'deme' where user_id = '999AE93AA4A74DFA9ADDC1809AF901FE';
+

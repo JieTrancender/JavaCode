@@ -9,16 +9,18 @@ public class UserAuth {
     private String userId;
     private String identityType;
     private String identifier;
-    private String credential_digest;
+    private String credentialDigest;
+    private String rememberMeDigest;
 
     public UserAuth() {
     }
 
-    public UserAuth(String userId, String identityType, String identifier, String credential) {
+    public UserAuth(String userId, String identityType, String identifier, String credential, String rememberMeDigest) {
         this.userId = userId;
         this.identityType = identityType;
         this.identifier = identifier;
-        this.credential_digest = CommonUtils.encoderByMd5(credential);
+        this.credentialDigest = CommonUtils.encoderByMd5(credential);
+        this.rememberMeDigest = rememberMeDigest;
     }
 
     public String getUserId() {
@@ -50,25 +52,34 @@ public class UserAuth {
     }
 
     public String getCredentialDigest() {
-        return credential_digest;
+        return credentialDigest;
     }
 
     public void setCredentialDigest(String credential) {
-        this.credential_digest = CommonUtils.encoderByMd5(credential);
+        this.credentialDigest = CommonUtils.encoderByMd5(credential);
     }
 
     //notice the credential_digest has been encodered
-    public void setCredential(String credential_digest) {
-        this.credential_digest = credential_digest;
+    public void setCredential(String credentialDigest) {
+        this.credentialDigest = credentialDigest;
+    }
+
+    public String getRememberMeDigest() {
+        return rememberMeDigest;
+    }
+
+    public void setRememberMeDigest(String rememberMeDigest) {
+        this.rememberMeDigest = rememberMeDigest;
     }
 
     @Override
     public String toString() {
-        return "UserAuthDao{" +
+        return "UserAuth{" +
                 "userId='" + userId + '\'' +
                 ", identityType='" + identityType + '\'' +
                 ", identifier='" + identifier + '\'' +
-                ", credential_digest='" + credential_digest + '\'' +
+                ", credential_digest='" + credentialDigest + '\'' +
+                ", remember_me_digest='" + rememberMeDigest + '\'' +
                 '}';
     }
 }
