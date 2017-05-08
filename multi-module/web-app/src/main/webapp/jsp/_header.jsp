@@ -20,6 +20,14 @@
 	<%--<link rel="stylesheet" href="../css/login.css">--%>
 </head>
 <body>
+<%--<%--%>
+	<%--HttpSession httpSession = request.getSession();--%>
+	<%--if (httpSession.getAttribute("current") == null) {--%>
+<%--//	    request.getRequestDispatcher("/jsp/login.jsp").forward(request, response);--%>
+		<%--response.sendRedirect("/jsp/login.jsp");--%>
+	<%--}--%>
+<%--%>--%>
+
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">

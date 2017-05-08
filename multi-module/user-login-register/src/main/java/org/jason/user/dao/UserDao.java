@@ -7,6 +7,6 @@ import org.jason.user.domain.User;
  * Created by JTrancender on 2017/4/12.
  */
 public interface UserDao {
-    public void add(User user);
-    public User find(String identity_type, String identifier);
+    void add(User user);
+    User find(String identity_type, String identifier);
 }

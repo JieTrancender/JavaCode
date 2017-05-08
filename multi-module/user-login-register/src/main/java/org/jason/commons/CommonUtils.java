@@ -40,4 +40,8 @@ public class CommonUtils {
     public static boolean checkPassword(String firstKey, String lastKey) {
         return encoderByMd5(firstKey).equals(lastKey);
     }
+
+    public static String getRememberMeDigest() {
+        return encoderByMd5(uuid());
+    }
 }

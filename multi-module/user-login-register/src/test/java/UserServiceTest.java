@@ -1,4 +1,6 @@
 import org.jason.commons.CommonUtils;
+import org.jason.user.dao.JdbcUserAuthDaoImpl;
+import org.jason.user.dao.UserAuthDao;
 import org.jason.user.domain.User;
 import org.jason.user.domain.UserAuth;
 import org.jason.user.service.UserException;
@@ -70,5 +72,37 @@ public class UserServiceTest {
         userService.rememberLogin(user1.getUserAuth());
         user1 = userService.find(user1.getUserAuth());
         System.out.println(user1.getUserAuth().toString());
+    }
+
+    @Test
+    public void testFindByType() {
+        String identity_type = "email";
+        String identifier = "test@jie-trancender.org";
+//        UserService userService = new UserService();
+        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
+        UserAuth userAuth = userAuthDao.findByTypeAndIdentifier(identity_type, identifier);
+        System.out.println(userAuth.toString());
+    }
+
+    @Test
+    public void testFindByCookie() {
+        String userIdDigest = "9A93332EDDBE4375B6141D2870F03153";
+        String rememberMeDigest = "eCmZ2W4S5N9H/JfjXSAQ+g==";
+        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
+        UserAuth userAuth = userAuthDao.findByUserIdAndRememberMe(userIdDigest, rememberMeDigest);
+        System.out.println(userAuth.toString());
+    }
+
+    @Test
+    public void testCookieLogin() {
+        String userIdDigest = "9A93332EDDBE4375B6141D2870F03153";
+        String rememberMeDigest = "eCmZ2W4S5N9H/JfjXSAQ+g==";
+        UserService userService = new UserService();
+        try {
+            User user = userService.cookieLogin(userIdDigest, rememberMeDigest);
+            System.out.println(user.toString());
+        } catch (UserException e) {
+            e.printStackTrace();
+        }
     }
 }

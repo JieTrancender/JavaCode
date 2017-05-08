@@ -7,6 +7,7 @@ import org.jason.user.dao.UserDao;
 import org.jason.user.domain.User;
 import org.jason.user.domain.UserAuth;
 
+
 /**
  * Created by JTrancender on 2017/4/12.
  */
@@ -31,6 +32,14 @@ public class UserService {
         if (!_user.getUserAuth().getCredentialDigest().equals(user.getCredentialDigest())) {
             throw new UserException(user.getIdentityType() + "或者密码输入错误！");
         }
+    }
+
+    public User cookieLogin(String userIdDigest, String rememberMeDigest) throws UserException {
+        UserAuth _userAuth = userAuthDao.findByUserIdAndRememberMe(userIdDigest, rememberMeDigest);
+        if (_userAuth == null) {
+            throw new UserException(userIdDigest + ":" + rememberMeDigest + "已失效!");
+        }
+        return userDao.find(_userAuth.getIdentityType(), _userAuth.getIdentifier());
     }
 
     public void rememberLogin(UserAuth userAuth) {

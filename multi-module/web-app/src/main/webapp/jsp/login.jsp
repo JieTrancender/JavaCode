@@ -1,4 +1,7 @@
-<%--
+<%@ page import="org.jason.user.web.servlet.UserServlet" %>
+<%@ page import="org.jason.user.service.UserService" %>
+<%@ page import="org.jason.user.domain.User" %>
+<%@ page import="org.jason.user.service.UserException" %><%--
   Created by IntelliJ IDEA.
   User: JTrancender
   Date: 2017/4/24
@@ -34,6 +37,34 @@
 		</div>
 	</c:if>
 
+	<%
+		UserService userService = new UserService();
+		String userIdDigest = null;
+		String rememberMeDigest = null;
+		Cookie[] cookies = request.getCookies();
+		for(Cookie cookie : cookies) {
+		    if (cookie.getName().equalsIgnoreCase("userIdDigest")) {
+		        userIdDigest = cookie.getValue();
+				} else if (cookie.getName().equalsIgnoreCase("rememberMeDigest")) {
+		        rememberMeDigest = cookie.getValue();
+				} else {
+		        continue;
+				}
+		}
+
+		if (userIdDigest != null && rememberMeDigest != null) {
+			try {
+				User user = userService.cookieLogin(userIdDigest, rememberMeDigest);
+				System.out.println(user.toString());
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("current", user);
+				response.sendRedirect("/index.jsp");
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
+	%>
+
 	<div class="container">
 		<form class="form-signin" role="form" action="<c:url value="/LoginServlet"/>" method="post">
 			<h2 class="form-signin-heading">Please sign in</h2>
@@ -41,7 +72,7 @@
 			<input name="password" type="password" class="form-control" value="${cookie['password'].value}" placeholder="Password" required>
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" value="remember-me"> Remember me
+					<input id="remember_me" name="remember_me" type="checkbox"> Remember me
 				</label>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

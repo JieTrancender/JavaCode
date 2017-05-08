@@ -14,10 +14,6 @@ import java.sql.SQLException;
  * Created by JTrancender on 2017/4/12.
  */
 public class JdbcUserDaoImpl implements UserDao {
-    public boolean isRegister(String identity_type, String identifier) {
-        User user = find(identity_type, identifier);
-        return user != null;
-    }
     public User find(String identity_type, String identifier) {
         Connection conn = null;
         PreparedStatement pstmt = null;
