@@ -5,6 +5,35 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>org.jason.user.web.filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>IpFilter</filter-name>
+    <filter-class>org.jason.user.web.filter.IpFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>IpFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>org.jason.user.web.listener.SessionCounterListener</listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+
   <servlet>
     <servlet-name>Simple</servlet-name>
     <servlet-class>org.jason.web.servlet.SimpleServlet</servlet-class>

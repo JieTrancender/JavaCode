@@ -1,7 +1,8 @@
 <%@ page import="org.jason.user.web.servlet.UserServlet" %>
 <%@ page import="org.jason.user.service.UserService" %>
 <%@ page import="org.jason.user.domain.User" %>
-<%@ page import="org.jason.user.service.UserException" %><%--
+<%@ page import="org.jason.user.service.UserException" %>
+<%@ page import="org.jason.commons.CommonUtils" %><%--
   Created by IntelliJ IDEA.
   User: JTrancender
   Date: 2017/4/24
@@ -59,8 +60,11 @@
 				HttpSession httpSession = request.getSession();
 				httpSession.setAttribute("current", user);
 				response.sendRedirect("/index.jsp");
-			} catch (Exception e) {
-				throw new RuntimeException(e);
+			} catch (UserException e) {
+//				throw new RuntimeException(e);
+				CommonUtils.removeCookie(request, response, "userIdDigest");
+				CommonUtils.removeCookie(request, response, "rememberMeDigest");
+				return;
 			}
 		}
 	%>

@@ -114,7 +114,7 @@ public class JdbcUserAuthDaoImpl implements UserAuthDao {
 
         try {
             conn = JdbcUtils.getConnection();
-            String remember_me_digest = CommonUtils.encoderByMd5(CommonUtils.uuid());
+            String remember_me_digest = CommonUtils.getRememberMeDigest();
             String sql = "update user_auths set remember_me_digest = ? where identity_type = ? and identifier = ?";
             pstmt = conn.prepareStatement(sql);
 

@@ -3,6 +3,9 @@ package org.jason.commons;
 import org.apache.commons.beanutils.BeanUtils;
 import sun.misc.BASE64Encoder;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.security.MessageDigest;
 import java.util.Map;
 import java.util.UUID;
@@ -43,5 +46,52 @@ public class CommonUtils {
 
     public static String getRememberMeDigest() {
         return encoderByMd5(uuid());
+    }
+
+    public static String getIpAddr(HttpServletRequest request) {
+        String ip = request.getHeader("x-forwarded-for");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            if (ip.contains(",")) {
+                ip = ip.split(",")[0];
+            }
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_CLIENT_IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("X-Real-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        return ip;
+    }
+
+    public static void removeCookie(HttpServletRequest request, HttpServletResponse response, String cookieName) {
+        Cookie[] cookies = request.getCookies();
+        for(Cookie cookie : cookies) {
+            if (cookie.getName().equalsIgnoreCase(cookieName)) {
+                cookie.setMaxAge(0);
+                cookie.setPath("/");
+                response.addCookie(cookie);
+                break;
+            }
+        }
+    }
+
+    public static void addCookie(HttpServletResponse response, String cookieName, String cookieValue) {
+        Cookie cookie = new Cookie(cookieName, cookieValue);
+        cookie.setMaxAge(60 * 60 * 24 * 30);
+        cookie.setPath("/");
+        response.addCookie(cookie);
     }
 }
