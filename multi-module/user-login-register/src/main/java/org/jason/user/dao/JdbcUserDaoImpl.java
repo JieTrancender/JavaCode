@@ -1,5 +1,6 @@
 package org.jason.user.dao;
 
+import org.apache.log4j.Logger;
 import org.jason.commons.CommonUtils;
 import org.jason.commons.JdbcUtils;
 import org.jason.user.domain.User;
@@ -9,11 +10,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+//import java.util.logging.Logger;
 
 /**
  * Created by JTrancender on 2017/4/12.
  */
 public class JdbcUserDaoImpl implements UserDao {
+//    private static final Logger logger = Logger.getLogger(String.valueOf("JdbcUserDaoImpl"));
     public User find(String identity_type, String identifier) {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -84,9 +87,11 @@ public class JdbcUserDaoImpl implements UserDao {
 
             pstmt.executeUpdate();
             JdbcUtils.commitTransaction();
+//            logger.info("JdbcUserDaoImpl#add:" + user.toString() + "success");
         } catch (Exception e) {
             try {
                 JdbcUtils.rollbackTransaction();
+//                logger.info("JdbcUserDaoImpl#add:" + user.toString() + " fail");
             } catch (SQLException se) {
                 throw  new RuntimeException(se);
             }  //no content

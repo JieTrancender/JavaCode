@@ -42,7 +42,6 @@ public class IpFilter implements Filter {
         }
 
         String ip = getIpAddr(request);
-        System.out.println("ip = " + ip);
         if (ipContextMap.containsKey(ip)) {
             Integer count = ipContextMap.get(ip);
             if (!ipSessionMap.containsKey(ip)) {
@@ -59,7 +58,6 @@ public class IpFilter implements Filter {
         servletContext.setAttribute("sessionSum", sessionSum);
         httpSession.setAttribute("ipSessionMap", ipSessionMap);
         chain.doFilter(req, resp);
-        System.out.println("after ip filter");
     }
 
     public void init(FilterConfig config) throws ServletException {

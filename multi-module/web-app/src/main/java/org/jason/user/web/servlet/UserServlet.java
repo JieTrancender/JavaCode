@@ -1,5 +1,6 @@
 package org.jason.user.web.servlet;
 
+import org.jason.user.domain.User;
 import org.jason.user.service.UserService;
 
 import javax.servlet.ServletContext;
@@ -23,7 +24,7 @@ public class UserServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ServletContext servletContext = request.getServletContext();
+        /*ServletContext servletContext = request.getServletContext();
         Map<String, Integer> ipContextMap = (HashMap<String, Integer>) servletContext.getAttribute("ipContextMap");
         if (ipContextMap != null) {
             System.out.println(ipContextMap);
@@ -45,9 +46,12 @@ public class UserServlet extends HttpServlet {
                 System.out.print(values[i] + ";");
             }
             System.out.println("");
-        }
+        }*/
 
         UserService userService = new UserService();
-
+        User user = (User) request.getSession().getAttribute("current");
+        if (null != user) {
+            System.out.println("current user:" + request.getSession().getAttribute("current").toString());
+        }
     }
 }

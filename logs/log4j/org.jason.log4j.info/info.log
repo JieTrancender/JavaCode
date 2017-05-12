@@ -1,0 +1,3 @@
+2017-05-12 11:19:40,468 DEBUG Debug:11 - debug in debug level
+2017-05-12 11:19:40,484  INFO Debug:12 - debug in debug level
+2017-05-12 11:19:40,484 ERROR Debug:13 - debug in debug level

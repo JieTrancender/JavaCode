@@ -17,14 +17,16 @@
 	<title>Ip Table | JTrancender's Blog</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/styles.css">
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/ip-table.css">
 </head>
 <body>
 	<%@ include file="_header.jsp"%>
 
-	<c:forEach items="${applicationScope.ipContextMap}" var="ipSet">
-		${ipSet.key} = ${ipSet.value}<br/>
-	</c:forEach>
+	<div class="iptable">
+		<c:forEach items="${applicationScope.ipContextMap}" var="ipSet">
+			<p>${ipSet.key} = ${ipSet.value}</p>
+		</c:forEach>
+	</div>
 
 	<%@ include file="_footer.jsp"%>
 </body>

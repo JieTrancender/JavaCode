@@ -15,7 +15,7 @@ public class UserDaoJdbcImplTest {
         String user_gender = "女";
         String user_avatar = "images/avatar/default.jpg";
         String identity_type = "email";
-        String identifier = "ming-email@jie-trancender.org";
+        String identifier = "ming-email6@jie-trancender.org";
         String credential = "ShaoJie@qq.com";
         String remember_me_digest = CommonUtils.uuid();
         String uuid = CommonUtils.uuid();

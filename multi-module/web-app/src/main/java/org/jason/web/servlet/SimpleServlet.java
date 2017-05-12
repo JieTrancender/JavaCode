@@ -1,5 +1,6 @@
 package org.jason.web.servlet;
 
+import org.apache.log4j.Logger;
 import org.jason.SimpleService;
 import org.jason.user.dao.JdbcUserDaoImpl;
 import org.jason.user.dao.UserDao;
@@ -17,6 +18,7 @@ import java.io.PrintWriter;
  * Created by JTrancender on 2017/4/12.
  */
 public class SimpleServlet extends HttpServlet {
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(SimpleServlet.class));
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
@@ -38,6 +40,7 @@ public class SimpleServlet extends HttpServlet {
         cookie.setPath("/");
         resp.addCookie(cookie);
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        LOGGER.info("add cookie 'Compiler = Idea.v2016.3.4'");
         //super.doPost(req, resp);
     }
 }

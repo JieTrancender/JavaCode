@@ -30,15 +30,13 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         form.setCredentialDigest(password);
         userService.rememberLogin(form.getUserAuth());
-//        userService.forgetLogin(form.getUserAuth());
-
-        System.out.println(form.toString());
 
         //verifyCode - this part hasn't done
 
         try {
             userService.register(form);
             userService.login(form.getUserAuth());
+            userService.rememberLogin(form.getUserAuth());
             User current = userService.find(form.getUserAuth());
             HttpSession session = request.getSession();
             session.setAttribute("current", current);

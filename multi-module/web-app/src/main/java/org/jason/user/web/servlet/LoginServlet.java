@@ -68,6 +68,7 @@ public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = new UserService();
+        System.out.println("LoginServlet#doGet");
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("current");

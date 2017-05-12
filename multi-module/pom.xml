@@ -14,6 +14,7 @@
         <module>encryption</module>
         <module>user-login-register</module>
         <module>qiniu</module>
+        <module>log4j</module>
     </modules>
 
 
