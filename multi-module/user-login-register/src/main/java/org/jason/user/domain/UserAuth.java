@@ -55,13 +55,13 @@ public class UserAuth {
         return credentialDigest;
     }
 
-    public void setCredentialDigest(String credential) {
-        this.credentialDigest = CommonUtils.encoderByMd5(credential);
+    public void setCredentialDigest(String credentialDigest) {
+        this.credentialDigest = credentialDigest;
     }
 
     //notice the credential_digest has been encodered
-    public void setCredential(String credentialDigest) {
-        this.credentialDigest = credentialDigest;
+    public void setCredential(String credential) {
+        this.credentialDigest = CommonUtils.encoderByMd5(credential);
     }
 
     public String getRememberMeDigest() {
@@ -78,8 +78,8 @@ public class UserAuth {
                 "userId='" + userId + '\'' +
                 ", identityType='" + identityType + '\'' +
                 ", identifier='" + identifier + '\'' +
-                ", credential_digest='" + credentialDigest + '\'' +
-                ", remember_me_digest='" + rememberMeDigest + '\'' +
+                ", credentialDigest='" + credentialDigest + '\'' +
+                ", rememberMeDigest='" + rememberMeDigest + '\'' +
                 '}';
     }
 }

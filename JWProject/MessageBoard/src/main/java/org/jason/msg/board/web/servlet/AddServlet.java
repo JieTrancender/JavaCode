@@ -29,14 +29,11 @@ public class AddServlet extends HttpServlet {
 
         Message msg = CommonUtils.toBean(request.getParameterMap(), Message.class);
 
-        System.out.println(msg.toString());
-
         try {
             messageService.addMessage(msg);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        //request.getRequestDispatcher("/index.jsp").forward(request, response);
         response.sendRedirect("/AddServlet");
     }
 
@@ -48,14 +45,6 @@ public class AddServlet extends HttpServlet {
             Collections.reverse(messageList);
             request.setAttribute("msgList", messageList);
             request.setAttribute("msgListSize", messageList.size());
-            //request.getSession().setAttribute("msgListSize", messageList.size());
-
-//            for(Message msg : messageList) {
-//                System.out.println(msg.toString());
-//            }
-            //request.getRequestDispatcher("/jsp/get-messages.jsp").forward(request, response);
-            //request.getRequestDispatcher("/jsp/show-msgs.jsp").forward(request, response);
-//            request.getRequestDispatcher("/jsp/qzon-msg-board.jsp").forward(request, response);
             request.getRequestDispatcher("/jsp/_msgs.jsp").forward(request, response);
         } catch (Exception e) {
             throw new RuntimeException(e);

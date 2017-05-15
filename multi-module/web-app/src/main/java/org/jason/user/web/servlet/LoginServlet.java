@@ -38,19 +38,15 @@ public class LoginServlet extends HttpServlet {
             User user;
 
             String remember_me = request.getParameter("remember_me");
-            System.out.println("remember_me = " + remember_me);
             if (remember_me != null && remember_me.equals("on")) {
                 userService.rememberLogin(form);
                 user = userService.find(form);
-                System.out.println(user.toString());
-                System.out.println("LoginServlet(rememberMeDigest):" + user.getUserAuth().getRememberMeDigest());
 
                 CommonUtils.addCookie(response, "userIdDigest", user.getUserAuth().getUserId());
                 CommonUtils.addCookie(response, "rememberMeDigest", user.getUserAuth().getRememberMeDigest());
             } else {
                 userService.forgetLogin(form);
                 user = userService.find(form);
-                System.out.println(user.toString());
                 CommonUtils.removeCookie(request, response, "userIdDigest");
                 CommonUtils.removeCookie(request, response, "rememberMeDigest");
             }
@@ -68,7 +64,6 @@ public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = new UserService();
-        System.out.println("LoginServlet#doGet");
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("current");

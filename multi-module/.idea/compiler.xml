@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="encryption" />
+        <module name="experiment" />
+        <module name="JarTest" />
         <module name="log4j" />
         <module name="qiniu" />
         <module name="user-login-register" />
@@ -16,6 +18,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="encryption" target="1.5" />
+      <module name="experiment" target="1.5" />
+      <module name="JarTest" target="1.5" />
       <module name="log4j" target="1.5" />
       <module name="multi-module" target="1.5" />
       <module name="qiniu" target="1.5" />

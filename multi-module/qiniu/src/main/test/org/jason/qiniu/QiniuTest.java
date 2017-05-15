@@ -4,15 +4,18 @@ import com.google.gson.Gson;
 import com.qiniu.common.QiniuException;
 import com.qiniu.common.Zone;
 import com.qiniu.http.Response;
+import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
+import com.qiniu.storage.model.FileInfo;
 import com.qiniu.storage.persistent.FileRecorder;
 import com.qiniu.util.Auth;
 import com.qiniu.util.StringMap;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.nio.file.Paths;
 
@@ -145,6 +148,13 @@ public class QiniuTest {
         }
     }
 
+    @Test
+    public void testGetUrl() {
+        String url = "";
+        String downloadUrl = getAuth().privateDownloadUrl(url, 3600);
+        System.out.println(downloadUrl);
+    }
+
     //数据流上传
     @Test
     public void testServerUpload3() {
@@ -170,6 +180,33 @@ public class QiniuTest {
             printResponse(uploadManager.put(localFilePath, key, getUpToken()));
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    public void testShowFileList() {
+        Configuration configuration = new Configuration(Zone.autoZone());
+        String accessKey = "3Qtork7ifbgTZ9tWPuNGULubJN0KOXbRwHZ33Txr";
+        String secretKey = "TG5dfKXaXy-3uKYEEsW51x8SYLJ9H-5A8lWOxs7I";
+        String bucket = "jie-trancender";
+        Auth auth = Auth.create(accessKey, secretKey);
+        BucketManager bucketManager = new BucketManager(auth, configuration);
+        String prefix = "photos/MingEr";
+        int limit = 1000;
+        String delimiter = "";
+
+        BucketManager.FileListIterator fileListIterator = bucketManager.createFileListIterator(bucket, prefix, limit, delimiter);
+        while (fileListIterator.hasNext()) {
+            FileInfo[] items = fileListIterator.next();
+            for (FileInfo item : items) {
+                System.out.println("images.jie-trancender.org/" + item.key);
+//                System.out.println(item.hash);
+//                System.out.println(item.fsize);
+//                System.out.println(item.mimeType);
+//                System.out.println(item.putTime);
+//                System.out.println(item.endUser);
+
+            }
         }
     }
 }

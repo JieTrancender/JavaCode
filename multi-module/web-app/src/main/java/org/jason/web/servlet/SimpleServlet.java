@@ -25,7 +25,7 @@ public class SimpleServlet extends HttpServlet {
         String serviceDesc = SimpleService.getServiceDescription();
 
         UserDao userDao = new JdbcUserDaoImpl();
-        User user = userDao.find("email", "jie-email@jie-trancender.org");
+        User user = userDao.read("email", "jie-email@jie-trancender.org");
         System.out.println(user);
         out.println(user.toString());
         out.println(serviceDesc);

@@ -13,6 +13,7 @@
 	<title>Title</title>
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="stylesheet" href="../css/qzon-msg-board.css">
+	<script src="../js/vendor/validation/validation-framework.js"></script>
 </head>
 <body>
 <div id="header"></div>
@@ -21,13 +22,15 @@
 	<a name="c_tx"></a>
 	<div class="post_panel">
 		<h3>发表您的留言:</h3>
+		<form id="msg-board">
 		<div class="comment_editor">
 			<div class="editor_top">
 				<span><img src="../images/smile.png" width="15" height="15"></span>
 			</div>
 			<!--输入信息-->
+
 			<div class="editor_body">
-				<textarea></textarea>
+				<textarea id="msg-text"></textarea>
 			</div>
 		</div>
 		<div class="editor_expand">
@@ -36,8 +39,9 @@
 	</div>
 	<!--提交按钮-->
 	<div class="comment_oper">
-		<button type="submit" value="提交">提交</button>
+		<button type="submit" value="提交" onsubmit="return doValidate(this)">提交</button>
 	</div>
+	</form>
 	<%--<div class="comment_tit">--%>
 		<%--<h4>留言 <span>(${sessionScope.msgListSize})</span></h4>--%>
 	<%--</div>--%>

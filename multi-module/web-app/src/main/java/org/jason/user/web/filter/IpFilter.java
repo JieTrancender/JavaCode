@@ -23,7 +23,6 @@ public class IpFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) resp;
 
         ServletContext servletContext = filterConfig.getServletContext();
         Map<String, Integer> ipContextMap = (Map<String, Integer>) servletContext.getAttribute("ipContextMap");

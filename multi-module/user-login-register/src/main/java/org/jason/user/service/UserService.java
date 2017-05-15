@@ -1,5 +1,6 @@
 package org.jason.user.service;
 
+import org.jason.commons.CommonUtils;
 import org.jason.user.dao.JdbcUserAuthDaoImpl;
 import org.jason.user.dao.JdbcUserDaoImpl;
 import org.jason.user.dao.UserAuthDao;
@@ -16,15 +17,15 @@ public class UserService {
     private UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
 
     public void register(User user) throws UserException {
-        User _user = userDao.find(user.getUserAuth().getIdentityType(), user.getUserAuth().getIdentifier());
+        User _user = userDao.read(user.getUserAuth().getIdentityType(), user.getUserAuth().getIdentifier());
         if (null != _user) {
             throw new UserException(user.getUserAuth().getIdentityType() + ":" + user.getUserAuth().getIdentifier() + " 已经被注册！");
         }
-        userDao.add(user);
+        userDao.create(user);
     }
 
     public void login(UserAuth user) throws UserException {
-        User _user = userDao.find(user.getIdentityType(), user.getIdentifier());
+        User _user = userDao.read(user.getIdentityType(), user.getIdentifier());
         if (null == _user) {
             throw new UserException(user.getIdentityType() + ":" + user.getIdentifier() + " 用户不存在！");
         }
@@ -35,22 +36,22 @@ public class UserService {
     }
 
     public User cookieLogin(String userIdDigest, String rememberMeDigest) throws UserException {
-        UserAuth _userAuth = userAuthDao.findByUserIdAndRememberMe(userIdDigest, rememberMeDigest);
+        UserAuth _userAuth = userAuthDao.readByRememberMe(userIdDigest, rememberMeDigest);
         if (_userAuth == null) {
             throw new UserException(userIdDigest + ":" + rememberMeDigest + "已失效!");
         }
-        return userDao.find(_userAuth.getIdentityType(), _userAuth.getIdentifier());
+        return userDao.read(_userAuth.getIdentityType(), _userAuth.getIdentifier());
     }
 
     public void rememberLogin(UserAuth userAuth) {
-        userAuthDao.rememberLogin(userAuth);
+        userAuthDao.updateRememberMe(userAuth.getIdentityType(), userAuth.getIdentifier(), CommonUtils.getRememberMeDigest());
     }
 
     public void forgetLogin(UserAuth userAuth) {
-        userAuthDao.forgetLogin(userAuth);
+        userAuthDao.updateRememberMe(userAuth.getIdentityType(), userAuth.getIdentifier(), CommonUtils.getRememberMeDigest());
     }
 
     public User find(UserAuth userAuth) {
-        return userDao.find(userAuth.getIdentityType(), userAuth.getIdentifier());
+        return userDao.read(userAuth.getIdentityType(), userAuth.getIdentifier());
     }
 }

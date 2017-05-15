@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JarTest/JarTest.iml" filepath="$PROJECT_DIR$/JarTest/JarTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/encryption/encryption.iml" filepath="$PROJECT_DIR$/encryption/encryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/experiment/experiment.iml" filepath="$PROJECT_DIR$/experiment/experiment.iml" />
       <module fileurl="file://$PROJECT_DIR$/log4j/log4j.iml" filepath="$PROJECT_DIR$/log4j/log4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/multi-module.iml" filepath="$PROJECT_DIR$/multi-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/qiniu/qiniu.iml" filepath="$PROJECT_DIR$/qiniu/qiniu.iml" />

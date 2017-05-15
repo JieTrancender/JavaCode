@@ -31,9 +31,9 @@
 		<p>
 			<label for="content">留言内容</label>
 			<textarea name="content" id="content" style="width:800px; height:400px;"></textarea>
-			<script type="text/javascript">
-				UE.getEditor("content");
-			</script>
+			<%--<script type="text/javascript">--%>
+				<%--UE.getEditor("content");--%>
+<%--//			</script>--%>
 		</p>
 		<p>
 			<input type="submit" value="Submit">

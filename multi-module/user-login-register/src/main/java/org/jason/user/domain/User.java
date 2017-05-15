@@ -98,6 +98,14 @@ public class User {
         return this.userAuth.getCredentialDigest();
     }
 
+    public void setRememberMeDigest(String rememberMeDigest) {
+        this.userAuth.setRememberMeDigest(rememberMeDigest);
+    }
+
+    public String getRememberMeDigest() {
+        return this.userAuth.getRememberMeDigest();
+    }
+
     @Override
     public String toString() {
         return "User{" +

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JarTest:war">
+    <output-path>$PROJECT_DIR$/JarTest/target</output-path>
+    <root id="archive" name="JarTest.war">
+      <element id="artifact" artifact-name="JarTest:war exploded" />
+    </root>
+  </artifact>
+</component>

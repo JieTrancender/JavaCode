@@ -18,17 +18,7 @@
 <body>
 	<%@ include file="/jsp/_header.jsp"%>
 	<h1>Hi, ${sessionScope.current.name} welcome to here.</h1>
-<%--<h2>Hello World!</h2>--%>
-<p><c:out value="${cookie['Compiler'].value}"/></p>
-	<%
-		String userType = request.getParameter("userType");
-		String userIdDigest = request.getParameter("userIdDigest");
-		String rememberMeDigest = request.getParameter("rememberMeDigest");
-		System.out.println(userType + " " + userIdDigest + " " + rememberMeDigest);
-	%>
-	<%--<p>Size = ${applicationScope.get("ipContextMap").size}</p>--%>
-	<%--<p>${applicationScope.ipContextMap}</p>--%>
-	<%--<p>Size = <c:out value="${fn:length(applicationScope.ipContextMap)}"></c:out> </p>--%>
+	<p><c:out value="${cookie['Compiler'].value}"/></p>
 	<%@ include file="/jsp/_footer.jsp"%>
 
 	<script src="./js/jquery.min.js"></script>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE validation-config SYSTEM "F:\JavaCode\JWProject\MessageBoard\src\main\webapp\js\validation-config.dtd">
 <validation-config lang="auto">
+	<form id="msg-board" show-error="alert" show-type="all">
+		<field name="msg-text" display-name="留言内容">
+			<depend name="required"/>
+			<depend name="maxLength" param0="200"/>
+		</field>
+	</form>
 	<form id="form1" show-error="alert" show-type="all">
 		<field name="username" display-name="用户名" onfail="">
 			<depend name="required" />
@@ -60,10 +66,10 @@
 			<depend name="minLength" param0="2"/>
 			<depend name="maxLength" param0="15"/>
 		</field>
-		<!--<field name="content" display-name="留言内容" onfail="">-->
-			<!--<depend name="required"/>-->
-			<!--<depend name="minLength" param0="8"/>-->
-			<!--<depend name="maxLength" param0="200"/>-->
-		<!--</field>-->
+		<field name="content" display-name="留言内容" onfail="">
+			<depend name="required"/>
+			<depend name="minLength" param0="8"/>
+			<depend name="maxLength" param0="200"/>
+		</field>
 	</form>
 </validation-config>

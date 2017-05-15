@@ -11,36 +11,42 @@ import org.junit.Test;
  * Created by JTrancender on 2017/4/12.
  */
 public class JdbcDaoImplTest {
-    @Test
-    public void testUserDaoAdd() {
-        UserDao userDao = new JdbcUserDaoImpl();
-        //User user = new User("Jason", "男", "default.jpg" );
-        //userDao.add(user);
-    }
+    private UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
 
     @Test
-    public void testUserDaoFind() {
-        int user_id = 1;
-        UserDao userDao = new JdbcUserDaoImpl();
-//        User user = userDao.findByUserUserId(user_id);
-//        System.out.println(user.toString());
-    }
-
-    @Test
-    public void testUserAuthDaoAdd() {
-        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
+    public void testUserAuthDaoCreate() {
         String remember_me_digest = CommonUtils.encoderByMd5(CommonUtils.uuid());
-        UserAuth userAuth = new UserAuth("1", "userName", "MingEr", "123456", remember_me_digest);
-        userAuthDao.add(userAuth);
+        UserAuth userAuth = new UserAuth("FCE309A2D2174EB8BF117F51A3E29C8D", "WeChat", "MingEr", "123456", remember_me_digest);
+        userAuthDao.create(userAuth);
     }
 
     @Test
-    public void testUserAuthDaoFind() {
-        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
-        UserAuth userAuth = userAuthDao.findByTypeAndIdentifier("userName", "MingEr");
+    public void testUserAuthDaoRead() {
+        String identityType = "QQ";
+        String identifier = "582865471";
+        UserAuth userAuth = userAuthDao.read(identityType, identifier);
+        System.out.println(userAuth);
+    }
+
+    @Test
+    public void testUserAuthDaoReadByRememberMe() {
+        String userIdDigest = "FCE309A2D2174EB8BF117F51A3E29C8D";
+        String rememberMeDigest = "4l2BRvkCm73zUJNG4Ait+Q==";
+        UserAuth userAuth = userAuthDao.readByRememberMe(userIdDigest, rememberMeDigest);
+        System.out.println(userAuth);
+    }
+
+    @Test
+    public void testUserAuthDaoUpdateRememberMe() {
+        String rememberMeDigest = null;
+        String identityType = "userName";
+        String identifier = "MingEr";
+
+        UserAuth userAuth = userAuthDao.read(identityType, identifier);
         System.out.println(userAuth);
 
-//        User user = new JdbcUserDaoImpl().findByUserUserId(userAuth.getUserId());
-//        System.out.println(user);
+        userAuthDao.updateRememberMe(identityType, identifier, rememberMeDigest);
+        userAuth = userAuthDao.read(identityType, identifier);
+        System.out.println(userAuth);
     }
 }
