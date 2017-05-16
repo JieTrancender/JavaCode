@@ -11,98 +11,57 @@ import org.junit.Test;
  * Created by JTrancender on 2017/4/24.
  */
 public class UserServiceTest {
-//    @Test
-    public User testRegister() {
-        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "phone", "18681700911", "JTrancender...", CommonUtils.encoderByMd5(CommonUtils.uuid()));
+    private UserService userService = new UserService();
+
+    private void print(String str) {
+        System.out.println(str);
+    }
+
+    @Test
+    public void testCreate() {
+        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "QQ", "317028774", "JTrancender...", CommonUtils.getRememberMeDigest());
         User user = new User("JieTrancender", "男", "images/avatar/default.jpg", userAuth);
-        UserService userService = new UserService();
         try {
-            userService.register(user);
-            System.out.println(user.getIdentityType() + ":" + user.getIdentifier() + " 注册成功！");
-            return user;
+            userService.createUser(user);
         } catch (UserException ue) {
-            System.err.println(ue.getMessage());
-        }
-        return user;
-    }
-
-    @Test
-    public void testLogin() {
-        UserAuth userAuth = new UserAuth();
-        userAuth.setIdentityType("phone");
-        userAuth.setIdentifier("18681700916");
-        userAuth.setCredentialDigest("JTrancender...");
-
-        UserService userService = new UserService();
-        try {
-            userService.login(userAuth);
-            System.out.println(userAuth.getIdentityType() + ":" + userAuth.getIdentifier() + "登录成功！");
-        } catch (UserException e) {
-            e.printStackTrace();
+            print(ue.getMessage());
         }
     }
 
     @Test
-    public void testRemember() {
-        UserService userService = new UserService();
-        User user = testRegister();
-        String identityType = user.getUserAuth().getIdentityType();
-        String identifier = user.getUserAuth().getIdentifier();
-        String credentialDigest = user.getUserAuth().getCredentialDigest();
-        System.out.println(user.toString());
-        System.out.println(user.getUserAuth().toString());
-
-        userService.rememberLogin(user.getUserAuth());
-
-        UserAuth userAuth = new UserAuth();
-        userAuth.setIdentityType(identityType);
-        userAuth.setIdentifier(identifier);
-        System.out.println(userAuth.toString());
-        User user1 = userService.find(userAuth);
-        System.out.println(user1.getUserAuth().toString());
-    }
-    @Test
-    public void testForget() {
-        UserService userService = new UserService();
-        User user = testRegister();
-        System.out.println(user.getUserAuth().toString());
-        userService.forgetLogin(user.getUserAuth());
-        User user1 = userService.find(user.getUserAuth());
-        System.out.println(user1.getUserAuth().toString());
-        userService.rememberLogin(user1.getUserAuth());
-        user1 = userService.find(user1.getUserAuth());
-        System.out.println(user1.getUserAuth().toString());
-    }
-
-    @Test
-    public void testFindByType() {
-        String identity_type = "email";
-        String identifier = "test@jie-trancender.org";
-//        UserService userService = new UserService();
-        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
-//        UserAuth userAuth = userAuthDao.findByTypeAndIdentifier(identity_type, identifier);
-//        System.out.println(userAuth.toString());
-    }
-
-    @Test
-    public void testFindByCookie() {
-        String userIdDigest = "9A93332EDDBE4375B6141D2870F03153";
-        String rememberMeDigest = "eCmZ2W4S5N9H/JfjXSAQ+g==";
-        UserAuthDao userAuthDao = new JdbcUserAuthDaoImpl();
-//        UserAuth userAuth = userAuthDao.findByUserIdAndRememberMe(userIdDigest, rememberMeDigest);
-//        System.out.println(userAuth.toString());
-    }
-
-    @Test
-    public void testCookieLogin() {
-        String userIdDigest = "9A93332EDDBE4375B6141D2870F03153";
-        String rememberMeDigest = "eCmZ2W4S5N9H/JfjXSAQ+g==";
-        UserService userService = new UserService();
+    public void testReadUserAuth() {
+        UserAuth userAuth = new UserAuth("", "QQ", "317028773", "JTrancender...", null);
         try {
-            User user = userService.cookieLogin(userIdDigest, rememberMeDigest);
-            System.out.println(user.toString());
-        } catch (UserException e) {
-            e.printStackTrace();
+            userService.readUserAuth(userAuth);
+        } catch (UserException ue) {
+            print(ue.getMessage());
+        }
+    }
+
+    @Test
+    public void testReadUserAuth2() {
+        String userIdDigest = "983B0A664C5C4071B0C3E2559168905B";
+        String rememberMeDigest = "lU810DeJkYmmCtR9EdgEXg==";
+        try {
+            User user = userService.readUserAuth(userIdDigest, rememberMeDigest);
+            print(user.toString());
+        } catch (UserException ue) {
+            print(ue.getMessage());
+        }
+    }
+
+    @Test
+    public void testUpdateUserAuth() {
+        UserAuth userAuth = new UserAuth("", "QQ", "317028773", "JTrancender...", null);
+        try {
+            User user = userService.readUserAuth(userAuth);
+            print(user.toString());
+
+            userService.updateUserAuth(userAuth, CommonUtils.getRememberMeDigest());
+            user = userService.readUserAuth(userAuth);
+            print(user.toString());
+        } catch (UserException ue) {
+            print(ue.getMessage());
         }
     }
 }

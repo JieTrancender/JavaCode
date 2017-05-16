@@ -1,6 +1,3 @@
-import org.apache.commons.dbutils.QueryRunner;
-import org.jason.common.TxQueryRunner;
-import org.jason.dao.JdbcUserAuthDaoImpl;
 import org.jason.dao.JdbcUserDaoImpl;
 import org.jason.domain.User;
 import org.jason.domain.UserAuth;

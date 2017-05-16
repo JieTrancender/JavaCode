@@ -1,6 +1,6 @@
 package org.jason.domain;
 
-import org.jason.common.CommonUtils;
+import org.jason.commons.CommonUtils;
 
 /**
  * Created by JTrancender on 2017/4/12.
