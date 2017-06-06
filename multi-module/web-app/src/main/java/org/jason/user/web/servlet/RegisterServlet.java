@@ -34,8 +34,10 @@ public class RegisterServlet extends HttpServlet {
         //verifyCode - this part hasn't done
 
         try {
-            userService.register(form);
-            userService.login(form.getUserAuth());
+//            userService.register(form);
+//            userService.login(form.getUserAuth());
+            userService.createUser(form);
+            userService.readUserAuth(form.getUserAuth());
             userService.rememberLogin(form.getUserAuth());
             User current = userService.find(form.getUserAuth());
             HttpSession session = request.getSession();

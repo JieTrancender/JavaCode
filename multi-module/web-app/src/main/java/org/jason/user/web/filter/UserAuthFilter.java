@@ -46,7 +46,8 @@ public class UserAuthFilter implements Filter {
                 if (userIdDigest != null && rememberMeDigest != null) {
                     UserService userService = new UserService();
                     try {
-                        user = userService.cookieLogin(userIdDigest, rememberMeDigest);
+//                        user = userService.cookieLogin(userIdDigest, rememberMeDigest);
+                        user = userService.readUserAuth(userIdDigest, rememberMeDigest);
                         HttpSession httpSession = request.getSession();
                         httpSession.setAttribute("current", user);
                         CommonUtils.addCookie(response, "userIdDigest", userIdDigest);

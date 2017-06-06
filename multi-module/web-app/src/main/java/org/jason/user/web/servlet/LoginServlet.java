@@ -34,7 +34,8 @@ public class LoginServlet extends HttpServlet {
         //This part hasn't done.
         //String verifyCode = request.getParameter("verifyCode");
         try {
-            userService.login(form);
+//            userService.login(form);
+            userService.readUserAuth(form);
             User user;
 
             String remember_me = request.getParameter("remember_me");
