@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login | </title>
+	<link rel="stylesheet" href="">
+	<script src="../js/vendor/jquery/jquery.min.js"></script>
+	<script>
+		function loadSuccess() {
+			alert("loadSuccess");
+		}
+
+		jQuery(document).ready(function() {
+			$.ajax({
+				type: "get",
+				async: true,
+				url: "http://localhost:8080/json/json",
+				dataType: "jsonp",
+				jsonp: "jsoncallback",
+				// jsonCallback: "loadSuccess",
+				success: function(json) {
+					$('#userId').html(json['userId']);
+					$('#identityType').html(json['identityType']);
+					$('#identifier').html(json['identifier']);
+					$('#credentialDigest').html(json['credentialDigest']);
+					$('#rememberMeDigest').html(json['rememberMeDigest']);
+				}
+			});
+
+			$("#button").click(function() {
+				$.ajax({
+					type: "get",
+					async: true,
+					url: "http:localhost:8080/json/json",
+					dataType: "jsonp",
+					jsonp: "jsoncallback",
+					jsonCallback: "success_jsonpCallback",
+					success: function(json) {
+						$('#userId').html(json['userId']);
+						$('#identityType').html(json['identityType']);
+						$('#identifier').html(json['identifier']);
+						$('#credentialDigest').html(json['credentialDigest']);
+						$('#rememberMeDigest').html(json['rememberMeDigest']);
+					}
+				});
+			});
+
+			var comment = {
+				identityType: "QQ",
+				identifier: "582865471",
+				crediential: "123"
+			};
+
+			$('#sumit-test').click(function() {
+				// var comment = $.toJSON($("form").serializeObject());
+				$("#request-process").html("正在提交数据");
+				$.ajax({
+					type: "post",
+					// contentType: "application/json",
+					url: "http://localhost:8080/user/login",
+					data: getJsonData(),
+					dataType: "jsonp",
+					jsonp: "jsoncallback",
+					jsonCallback: "success_jsonpCallback",
+					success: function(data) {
+						// $('#identifier').html(data['identifier']);
+						// $('#identityType').html(data['identityType']);
+						// $('#credentialDigest').html(data['']);
+						$('#request-process').html("数据提交成功");
+					},
+					error: function() {
+						$('#request-process').html("数据提交失败");
+					}
+				});
+			});
+
+			function getJsonData() {
+				var json = {
+					identityType: "QQ",
+					identifier: "582865471",
+					crediential: "123456"
+				};
+				return json;
+			}
+
+		});
+	</script>
+</head>
+<body>
+	<p>userId: <span id="userId"></span></p>
+	<p>identityType: <span id="identityType"></span></p>
+	<p>identifier: <span id="identifier"></span></p>
+	<p>credentialDigest: <span id="credentialDigest"></span></p>
+	<p>rememberMeDigest: <span id="rememberMeDigest"></span></p>
+	<button id="button">获取信息</button>
+	<button id = "submit">提交数据</button>
+	<form id="login" action="http://localhost:8080/json/json" method = "post">
+		<p><input type="text" id="identityType" name="identityType"></p>
+		<p><input type="text" id="identifier" name="identifier"></p>
+		<p><input type="password" id="crediential" name="crediential"></p>
+		<p><input type="button" value="submitload" id = "loadtest"></p>
+		<!-- <p><input type="submit" value="submit"></p> -->
+	</form>
+	<p id="request-process"></p>
+	<!-- <p id="data"></p> -->
+
+		<form action="">
+		<p><input type="text" id = "identityType" placeholder="QQ"></p>
+		<p><input type="text" id="identifier" placeholder="317028773"></p>
+		<p><input type="password" id="password" placeholder="JTrancender..."></p>
+		<p><input type="submit" id="submit-test" value="submit-test"></p>
+	</form>
+	<p id="request-process"></p>
+</body>
+</html>
