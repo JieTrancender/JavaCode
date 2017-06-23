@@ -7,10 +7,29 @@
 
   <servlet>
     <servlet-name>JsonServlet</servlet-name>
-    <servlet-class>org.jason.jason.web.servlet.JsonServlet</servlet-class>
+    <servlet-class>org.jason.web.servlet.JsonServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>JsonServlet</servlet-name>
     <url-pattern>/json</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserJsonServlet</servlet-name>
+    <servlet-class>org.jason.web.servlet.UserJsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserJsonServlet</servlet-name>
+    <url-pattern>/user-json</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UsersJsonServlet</servlet-name>
+    <servlet-class>org.jason.web.servlet.UsersJsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersJsonServlet</servlet-name>
+    <url-pattern>/users-json</url-pattern>
+  </servlet-mapping>
+
 </web-app>

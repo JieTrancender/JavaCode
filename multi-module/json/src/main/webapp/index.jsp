@@ -16,7 +16,7 @@
 				$.ajax({
 				    type: "get",
 						async: "true",
-						url: "http://localhost:8080/json/json",
+						url: "http://localhost:8080/json/user-json",
 						dataType: "jsonp",
 						jsonp: "jsoncallback",
 						jsonCallback: "....",

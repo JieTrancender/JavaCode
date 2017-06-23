@@ -1,7 +1,7 @@
-package org.jason.jason.web.servlet;
+package org.jason.web.servlet;
 
-import org.jason.commons.CommonUtils;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.CommonUtils;
+import jason.user.domain.UserAuth;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -10,11 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by JTrancender on 2017/5/16.
