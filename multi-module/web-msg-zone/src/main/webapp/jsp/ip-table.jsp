@@ -15,7 +15,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="#">
 	<title>Ip Table | JTrancender's Blog</title>
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../vendor/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="stylesheet" href="../css/ip-table.css">
 </head>

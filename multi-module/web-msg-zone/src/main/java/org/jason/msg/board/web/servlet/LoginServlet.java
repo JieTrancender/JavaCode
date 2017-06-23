@@ -25,12 +25,14 @@ public class LoginServlet extends HttpServlet {
 
         //This can refactor by add method UserAuth::encodingCredential();
         String credential = request.getParameter("password");
-        form.setCredentialDigest(credential);
+        form.setCredential(credential);
 
-        //This part hasn't done.
-        //String verifyCode = request.getParameter("verifyCode");
+        Cookie[] cookies = request.getCookies();
+        for (Cookie cookie : cookies) {
+            System.out.println(cookie);
+        }
+
         try {
-//            userService.login(form);
             userService.readUserAuth(form);
             User user;
 
@@ -51,7 +53,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("current", user);
 
-            response.sendRedirect("/index.jsp");
+            response.sendRedirect("/zone/index.jsp");
         } catch (UserException ue) {
             request.setAttribute("formInfo", form);
             request.setAttribute("alertMsg", "登录失败，请重新登录！");
@@ -69,6 +71,6 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("current", null);
         CommonUtils.removeCookie(request, response, "userIdDigest");
         CommonUtils.removeCookie(request, response, "rememberMeDigest");
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/zone/index.jsp");
     }
 }

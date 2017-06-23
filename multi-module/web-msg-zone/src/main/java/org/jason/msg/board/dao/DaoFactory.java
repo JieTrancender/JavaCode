@@ -22,12 +22,9 @@ public class DaoFactory {
 
     public static MessageDao getMessageDao() {
         String daoClassName = properties.getProperty("MessageDao");
-        System.out.println("properties:" + properties);
-        System.out.println("daoClassName:" + daoClassName);
 
         try {
             Class clazz = Class.forName(daoClassName);
-            System.out.println("clazz:" + clazz);
             return (MessageDao) clazz.newInstance();
         } catch (Exception e) {
             throw new RuntimeException(e);

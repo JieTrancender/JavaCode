@@ -11,10 +11,8 @@
 <html>
 <head>
 	<title>Title</title>
-	<link rel="stylesheet" href="<c:url value="/css/qzon-msg-board.css"/> ">
-	<link rel="stylesheet" href="<c:url value="/css/styles.css"/> ">
-	<script src="<c:url value="/vendor/js/jquery.min.js"/> "></script>
-	<script src="<c:url value="/js/qzon-msg-board.js"/> "></script>
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/qzon-msg-board.css">
 </head>
 <body>
 <div id="header"></div>
@@ -28,6 +26,8 @@
 				<div class="editor_top">
 					<span><img src="../images/smile.png" width="15" height="15"></span>
 				</div>
+				<!--输入信息-->
+
 				<div class="editor_body">
 					<textarea id="msg-text"></textarea>
 				</div>
@@ -35,25 +35,17 @@
 			<div class="editor_expand">
 				<img src="../images/editor_expand.png" width="172" height="125">
 			</div>
-	<%--</div>--%>
-			<div class="comment_oper">
-				<button type="submit" value="提交" onsubmit="return doValidate(this)">提交</button>
-			</div>
-		</form>
 	</div>
-	<div id="comment_div">
-		<div class="comment_tit">
-			<h4>留言 <span id = "msgSize">(${requestScope.msgArrayListSize})</span></h4>
-		</div>
-		<ul class="comment_list" id="comment_list">
-		</ul>
-		<%--<div class="other">--%>
-			<%--<p><a href="#c_tx">我要留言</a></p>--%>
-		<%--</div>--%>
+	<!--提交按钮-->
+	<div class="comment_oper">
+		<button type="submit" value="提交" onsubmit="return doValidate(this)">提交</button>
 	</div>
+	</form>
+	<div id="comment_div"></div>
 </div>
+<div id="footer"></div>
 
-<%--<div id="footer"></div>--%>
-
+<script src="../vendor/js/jquery.min.js"></script>
+<script src="../js/qzon-msg-board.js"></script>
 </body>
 </html>

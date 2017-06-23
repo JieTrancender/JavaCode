@@ -1,40 +1,38 @@
 package org.jason.msg.board.dao;
 
 import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import jason.common.tools.TxQueryRunner;
 import org.jason.msg.board.domain.Message;
 
 import java.sql.SQLException;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by JTrancender on 2017/3/17.
  */
 public class JdbcMessageDaoImpl implements MessageDao {
-    public void add(Message msg) throws SQLException {
+    public void create(Message msg) throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "insert into guestbook(name, phone, email, title, content, time) values(?,?,?,?,?,?)";
-        Object[] params = {msg.getName(), msg.getPhone(), msg.getEmail(), msg.getTitle(), msg.getContent(), msg.getTime()};
+        String sql = "insert into msg(hostId, friendId, content, time) values(?, ?, ?, ?)";
+        Object []  params = {msg.getHostId(), msg.getFriendId(), msg.getContent(), msg.getTime()};
 
         queryRunner.update(sql, params);
     }
 
-    public Message findByMessageName(String msgName) throws SQLException {
+    public ArrayList<Message> read(String hostId) throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "select name, phone, email, title, content, time from guestbook where name=?";
-        Object[] params = {msgName};
+        String sql = "select hostId, friendId, content, time from msg where hostId = ?";
+        Object[] params = {hostId};
 
-        Message msg = queryRunner.query(sql, new BeanHandler<Message>(Message.class), params);
-        return msg;
+        return (ArrayList<Message>) queryRunner.query(sql, new BeanListHandler<Message>(Message.class), params);
     }
 
-    public List<Message> getMessages() throws SQLException {
+    public ArrayList<Message> read(String hostId, String friendId) throws SQLException {
         QueryRunner queryRunner = new TxQueryRunner();
-        String sql = "select name, phone, email, title, content, time from guestbook";
+        String sql = "select hostId, friendId, content, time from msg where hostId = ? and friendId = ?";
+        Object[] params = {hostId, friendId};
 
-        List<Message> messageList = queryRunner.query(sql, new BeanListHandler<Message>(Message.class));
-        return messageList;
+        return (ArrayList<Message>) queryRunner.query(sql, new BeanListHandler<Message>(Message.class), params);
     }
 }

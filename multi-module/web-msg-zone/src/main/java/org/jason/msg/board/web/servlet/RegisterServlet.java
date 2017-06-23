@@ -21,18 +21,13 @@ public class RegisterServlet extends HttpServlet {
         User form = CommonUtils.toBean(request.getParameterMap(), User.class);
         form.getUserAuth().addUserId();
 
-        //This should refactor
         String identity_type = "email";
         form.setIdentityType(identity_type);
         String password = request.getParameter("password");
         form.setCredentialDigest(password);
         userService.rememberLogin(form.getUserAuth());
 
-        //verifyCode - this part hasn't done
-
         try {
-//            userService.register(form);
-//            userService.login(form.getUserAuth());
             userService.createUser(form);
             userService.readUserAuth(form.getUserAuth());
             userService.rememberLogin(form.getUserAuth());
@@ -41,18 +36,9 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("current", current);
             CommonUtils.addCookie(response, "userIdDigest", current.getUserAuth().getUserId());
             CommonUtils.addCookie(response, "rememberMeDigest", current.getUserAuth().getRememberMeDigest());
-            /*Cookie cookieIdentifier = new Cookie("identifier", form.getIdentifier());
-            cookieIdentifier.setMaxAge(60 * 60 * 24 * 30);
-            cookieIdentifier.setPath("/");
-            response.addCookie(cookieIdentifier);
-            Cookie cookiePassword = new Cookie("password", password);
-            cookiePassword.setMaxAge(60 * 60 * 24 * 30);
-            cookiePassword.setPath("/");
-            response.addCookie(cookiePassword);*/
-            response.sendRedirect("/index.jsp");
-//            request.getRequestDispatcher("/index.jsp").forward(request, response);
-//            response.getWriter().print("<h1>注册成功</h1>");
+            response.sendRedirect("/zone/index.jsp");
         } catch (UserException ue) {
+            System.out.println(ue.getMessage());
             request.setAttribute("alertMsg", ue.getMessage());
             request.setAttribute("userInfo", form);
             request.getRequestDispatcher("/jsp/register.jsp").forward(request, response);
@@ -62,7 +48,5 @@ public class RegisterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/index.jsp").forward(request, response);
-//        System.out.println("Register#doGet");
-//        doPost(request, response);
     }
 }

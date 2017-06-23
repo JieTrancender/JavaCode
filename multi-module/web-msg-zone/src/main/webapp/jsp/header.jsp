@@ -1,7 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<link rel="stylesheet" href="<c:url value="/css/qzon-msg-board.css"/> ">--%>
 
-<h1><img src="<c:url value="/images/logo.jpg"/>" alt="<c:url value="/images/logo.jpg"/>"/></h1>
+<h1><a href="<c:url value="/index.jsp"/> "><img src="<c:url value="/images/logo.jpg"/>" alt="<c:url value="/images/logo.jpg"/>"/></a></h1>
 <div class="topNav">
 	<p>
 		<c:choose>

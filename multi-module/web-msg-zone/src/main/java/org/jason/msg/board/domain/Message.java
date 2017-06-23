@@ -1,58 +1,38 @@
 package org.jason.msg.board.domain;
 
 /**
- * Created by JTrancender on 2017/3/17.
+ * Created by JTrancender on 2017/6/22.
  */
 public class Message {
-    private String name;
-    private String phone;
-    private String email;
-    private String title;
+    private String hostId;
+    private String friendId;
     private String content;
     private String time;
 
     public Message() {
     }
 
-    public Message(String name, String phone, String email, String title, String content, String time) {
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
-        this.title = title;
+    public Message(String hostId, String friendId, String content, String time) {
+        this.hostId = hostId;
+        this.friendId = friendId;
         this.content = content;
         this.time = time;
     }
 
-    public String getName() {
-        return name;
+    public String getHostId() {
+        return hostId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getFriendId() {
+        return friendId;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setFriendId(String friendId) {
+        this.friendId = friendId;
     }
 
     public String getContent() {
@@ -74,10 +54,8 @@ public class Message {
     @Override
     public String toString() {
         return "Message{" +
-                "name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", title='" + title + '\'' +
+                "hostId='" + hostId + '\'' +
+                ", friendId='" + friendId + '\'' +
                 ", content='" + content + '\'' +
                 ", time='" + time + '\'' +
                 '}';

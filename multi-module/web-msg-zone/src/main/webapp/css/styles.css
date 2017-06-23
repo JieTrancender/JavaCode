@@ -11,7 +11,7 @@ a:hover{text-decoration:underline;}
 /*header*/
 #header{width:1200px; height:60px; margin:0 auto;}
 h1{float:left; height:60px;}
-.topNav{width:228px; height:39px; float:right; padding-top:21px;}
+.topNav{width:428px; height:39px; float:right; padding-top:21px;}
 .topNav p{display:inline-block;}
 .topNav span{padding-left:8px;}
 

@@ -1,13 +1,5 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<%--
-  Created by IntelliJ IDEA.
-  User: JTrancender
-  Date: 2017/4/24
-  Time: 22:00
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
@@ -17,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="<c:url value="/index.jsp"/>" class="navbar-brand">JTrancender</a>
+			<a href="#" class="navbar-brand">JTrancender</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
@@ -38,7 +30,7 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"></a></li>
+				<li><a href="#">Default</a></li>
 				<li>
 					<c:choose>
 						<c:when test="${sessionScope.current.name != null}">
