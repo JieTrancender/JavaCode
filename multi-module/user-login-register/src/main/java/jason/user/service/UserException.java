@@ -1,4 +1,4 @@
-package org.jason.user.service;
+package jason.user.service;
 
 
 /**

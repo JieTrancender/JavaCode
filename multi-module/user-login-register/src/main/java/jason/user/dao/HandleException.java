@@ -1,4 +1,4 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

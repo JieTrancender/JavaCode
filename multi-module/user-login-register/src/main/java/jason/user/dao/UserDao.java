@@ -1,7 +1,9 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
 
-import org.jason.user.domain.User;
+import jason.user.domain.User;
+
+import java.util.ArrayList;
 
 /**
  * Created by JTrancender on 2017/4/12.
@@ -9,4 +11,6 @@ import org.jason.user.domain.User;
 public interface UserDao {
     void create(User user);
     User read(String identityType, String identifier);
+    ArrayList<User> read(String userId);
+    ArrayList<User> read();
 }

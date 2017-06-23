@@ -1,10 +1,8 @@
-import org.jason.commons.CommonUtils;
-import org.jason.user.dao.JdbcUserAuthDaoImpl;
-import org.jason.user.dao.UserAuthDao;
-import org.jason.user.domain.User;
-import org.jason.user.domain.UserAuth;
-import org.jason.user.service.UserException;
-import org.jason.user.service.UserService;
+import jason.common.tools.CommonUtils;
+import jason.user.domain.User;
+import jason.user.domain.UserAuth;
+import jason.user.service.UserException;
+import jason.user.service.UserService;
 import org.junit.Test;
 
 /**
@@ -19,7 +17,7 @@ public class UserServiceTest {
 
     @Test
     public void testCreate() {
-        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "QQ", "317028774", "JTrancender...", CommonUtils.getRememberMeDigest());
+        UserAuth userAuth = new UserAuth(CommonUtils.uuid(), "email", "ShaoJie2@qq.com", "JTrancender...", CommonUtils.getRememberMeDigest());
         User user = new User("JieTrancender", "男", "images/avatar/default.jpg", userAuth);
         try {
             userService.createUser(user);
@@ -30,9 +28,10 @@ public class UserServiceTest {
 
     @Test
     public void testReadUserAuth() {
-        UserAuth userAuth = new UserAuth("", "QQ", "317028773", "JTrancender...", null);
+        UserAuth userAuth = new UserAuth("", "email", "582865471@qq.com", "JTrancender...", null);
         try {
-            userService.readUserAuth(userAuth);
+            User user = userService.readUserAuth(userAuth);
+            System.out.println(user);
         } catch (UserException ue) {
             print(ue.getMessage());
         }

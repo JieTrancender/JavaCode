@@ -1,9 +1,13 @@
-import org.jason.commons.CommonUtils;
-import org.jason.user.dao.JdbcUserDaoImpl;
-import org.jason.user.dao.UserDao;
-import org.jason.user.domain.User;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.CommonUtils;
+import jason.user.dao.JdbcUserDaoImpl;
+import jason.user.dao.UserDao;
+import jason.user.domain.User;
+import jason.user.domain.UserAuth;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by JTrancender on 2017/4/24.
@@ -27,8 +31,8 @@ public class UserDaoJdbcImplTest {
 
     @Test
     public void testRead() {
-        String identityType = "QQ";
-        String identifier = "582865471";
+        String identityType = "email";
+        String identifier = "jie-email@jie-trancender.org";
         User user = userDao.read(identityType, identifier);
         System.out.println(user);
     }
@@ -37,5 +41,15 @@ public class UserDaoJdbcImplTest {
     public void testUserDao() {
         User user = new User("test", "test", "test", "test", "test", "test");
         System.out.println(user.toString());
+    }
+
+    @Test
+    public void testReadUsers() {
+        UserDao userDao = new JdbcUserDaoImpl();
+        ArrayList<User> users = userDao.read("");
+        Iterator<User> iter = users.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next());
+        }
     }
 }

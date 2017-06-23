@@ -1,4 +1,4 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
 import java.io.InputStream;
 import java.util.Properties;

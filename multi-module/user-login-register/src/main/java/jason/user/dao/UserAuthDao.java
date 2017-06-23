@@ -1,6 +1,6 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
-import org.jason.user.domain.UserAuth;
+import jason.user.domain.UserAuth;
 
 /**
  * Created by JTrancender on 2017/4/12.

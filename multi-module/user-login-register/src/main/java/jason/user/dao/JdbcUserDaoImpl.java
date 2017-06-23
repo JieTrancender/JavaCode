@@ -1,19 +1,14 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
-import org.apache.log4j.Logger;
-import org.jason.commons.CommonUtils;
-import org.jason.commons.JdbcUtils;
-import org.jason.commons.TxQueryRunner;
-import org.jason.user.domain.User;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.JdbcUtils;
+import jason.common.tools.TxQueryRunner;
+import jason.user.domain.User;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.util.logging.Logger;
+import java.util.ArrayList;
 
 /**
  * Created by JTrancender on 2017/4/12.
@@ -53,5 +48,31 @@ public class JdbcUserDaoImpl implements UserDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ArrayList<User> read(String userId) {
+        String sql = "select u.userId, name, gender, avatar, identityType, identifier, credentialDigest, rememberMeDigest " +
+                "from users u inner join user_auths a on u.userId = a.userId  and u.userId = ?";
+        Object[] params = {userId};
+        ArrayList<User> userArrayList = null;
+        try {
+            userArrayList = (ArrayList<User>) queryRunner.query(sql, new BeanListHandler<User>(User.class), params);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return userArrayList;
+    }
+
+    public ArrayList<User> read() {
+        String sql = "select u.userId, name, gender, avatar, identityType, identifier, credentialDigest, rememberMeDigest " +
+                "from users u inner join user_auths a on u.userId = a.userId";
+        Object[] params = {};
+        ArrayList<User> userArrayList = null;
+        try {
+            userArrayList = (ArrayList<User>) queryRunner.query(sql, new BeanListHandler<User>(User.class), params);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return userArrayList;
     }
 }

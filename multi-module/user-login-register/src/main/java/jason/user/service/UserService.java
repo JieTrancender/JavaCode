@@ -1,12 +1,14 @@
-package org.jason.user.service;
+package jason.user.service;
 
-import org.jason.commons.CommonUtils;
-import org.jason.user.dao.JdbcUserAuthDaoImpl;
-import org.jason.user.dao.JdbcUserDaoImpl;
-import org.jason.user.dao.UserAuthDao;
-import org.jason.user.dao.UserDao;
-import org.jason.user.domain.User;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.CommonUtils;
+import jason.user.dao.JdbcUserAuthDaoImpl;
+import jason.user.dao.JdbcUserDaoImpl;
+import jason.user.dao.UserAuthDao;
+import jason.user.dao.UserDao;
+import jason.user.domain.User;
+import jason.user.domain.UserAuth;
+
+import java.util.ArrayList;
 
 
 /**
@@ -55,5 +57,13 @@ public class UserService {
 
     public User read(String identityType, String identifier) {
         return userDao.read(identityType, identifier);
+    }
+
+    public ArrayList<User> read(String userId) {
+        return userDao.read(userId);
+    }
+
+    public ArrayList<User> read() {
+        return userDao.read();
     }
 }

@@ -1,8 +1,5 @@
-import org.jason.commons.JdbcUtils;
-import org.jason.commons.TxQueryRunner;
 import org.junit.Test;
 
-import java.sql.Connection;
 
 /**
  * Created by JTrancender on 2017/4/12.

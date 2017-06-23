@@ -1,10 +1,7 @@
-import org.jason.commons.CommonUtils;
-import org.jason.user.dao.JdbcUserAuthDaoImpl;
-import org.jason.user.dao.JdbcUserDaoImpl;
-import org.jason.user.dao.UserAuthDao;
-import org.jason.user.dao.UserDao;
-import org.jason.user.domain.User;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.CommonUtils;
+import jason.user.dao.JdbcUserAuthDaoImpl;
+import jason.user.dao.UserAuthDao;
+import jason.user.domain.UserAuth;
 import org.junit.Test;
 
 /**
@@ -16,7 +13,7 @@ public class JdbcDaoImplTest {
     @Test
     public void testUserAuthDaoCreate() {
         String remember_me_digest = CommonUtils.encoderByMd5(CommonUtils.uuid());
-        UserAuth userAuth = new UserAuth("FCE309A2D2174EB8BF117F51A3E29C8D", "WeChat", "MingEr", "123456", remember_me_digest);
+        UserAuth userAuth = new UserAuth("FCE309A2D2174EB8BF117F51A3E29C8D", "WeChat", "MingEr1", "123456", remember_me_digest);
         userAuthDao.create(userAuth);
     }
 

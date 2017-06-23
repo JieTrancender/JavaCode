@@ -1,6 +1,7 @@
-package org.jason.user.domain;
+package jason.user.domain;
 
-import org.jason.commons.CommonUtils;
+
+import jason.common.tools.CommonUtils;
 
 /**
  * Created by JTrancender on 2017/4/12.

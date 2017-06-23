@@ -1,4 +1,4 @@
-import org.jason.commons.CommonUtils;
+import jason.common.tools.CommonUtils;
 import org.junit.Test;
 
 /**

@@ -1,7 +1,7 @@
-package org.jason.user.service;
+package jason.user.service;
 
-import org.jason.user.dao.JdbcUserAuthDaoImpl;
-import org.jason.user.dao.UserAuthDao;
+import jason.user.dao.JdbcUserAuthDaoImpl;
+import jason.user.dao.UserAuthDao;
 
 /**
  * Created by JTrancender on 2017/4/12.

@@ -1,9 +1,10 @@
-package org.jason.user.dao;
+package jason.user.dao;
 
+import jason.user.domain.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
-import org.jason.commons.TxQueryRunner;
-import org.jason.user.domain.UserAuth;
+import jason.common.tools.TxQueryRunner;
+import jason.user.domain.UserAuth;
 
 import java.sql.SQLException;
 
